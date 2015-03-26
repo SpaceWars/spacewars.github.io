@@ -13,16 +13,16 @@
 $include-html-top-bar-classes: $include-html-classes !default;
 
 // Background color for the top bar
-$topbar-bg-color: $jumbo!default;
+$topbar-bg-color: $jet!default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
-$topbar-height: rem-calc(45) !default;
+$topbar-height: rem-calc(60) !default;
 $topbar-margin-bottom: 0 !default;
 
 // Controlling the styles for the title in the top bar
 $topbar-title-weight: $font-weight-normal !default;
-$topbar-title-font-size: rem-calc(17) !default;
+$topbar-title-font-size: rem-calc(20) !default;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $white !default;
@@ -32,11 +32,13 @@ $topbar-link-color-active-hover: $white !default;
 $topbar-link-weight: $font-weight-normal !default;
 $topbar-link-font-size: rem-calc(13) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
+
 $topbar-link-bg: $topbar-bg !default;
-$topbar-link-bg-hover: $oil !default;
+$topbar-link-bg-hover: $old-brick !default;
 $topbar-link-bg-color-hover: $charcoal !default;
 $topbar-link-bg-active: $primary-color !default;
 $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
+
 $topbar-link-font-family: $body-font-family !default;
 $topbar-link-text-transform: none !default;
 $topbar-link-padding: ($topbar-height / 3) !default;
