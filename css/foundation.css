@@ -175,7 +175,7 @@ select {
   width: 100%;
 }
 
-/* line 244, ../_sass/foundation/components/_grid.scss */
+/* line 249, ../_sass/foundation/components/_grid.scss */
 .row {
   width: 100%;
   margin-left: auto;
@@ -193,18 +193,18 @@ select {
 .row:after {
   clear: both;
 }
-/* line 248, ../_sass/foundation/components/_grid.scss */
+/* line 253, ../_sass/foundation/components/_grid.scss */
 .row.collapse > .column,
 .row.collapse > .columns {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 251, ../_sass/foundation/components/_grid.scss */
+/* line 256, ../_sass/foundation/components/_grid.scss */
 .row.collapse .row {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 254, ../_sass/foundation/components/_grid.scss */
+/* line 259, ../_sass/foundation/components/_grid.scss */
 .row .row {
   width: auto;
   margin-left: -0.9375rem;
@@ -222,7 +222,7 @@ select {
 .row .row:after {
   clear: both;
 }
-/* line 255, ../_sass/foundation/components/_grid.scss */
+/* line 260, ../_sass/foundation/components/_grid.scss */
 .row .row.collapse {
   width: auto;
   margin: 0;
@@ -238,7 +238,7 @@ select {
   clear: both;
 }
 
-/* line 259, ../_sass/foundation/components/_grid.scss */
+/* line 264, ../_sass/foundation/components/_grid.scss */
 .column,
 .columns {
   padding-left: 0.9375rem;
@@ -247,12 +247,12 @@ select {
   float: left;
 }
 
-/* line 262, ../_sass/foundation/components/_grid.scss */
+/* line 267, ../_sass/foundation/components/_grid.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: right;
 }
 
-/* line 263, ../_sass/foundation/components/_grid.scss */
+/* line 268, ../_sass/foundation/components/_grid.scss */
 [class*="column"] + [class*="column"].end {
   float: left;
 }
@@ -624,8 +624,12 @@ select {
     margin: 0;
   }
   /* line 235, ../_sass/foundation/components/_grid.scss */
-  .row h1 {
+  .row h1 .subheader, .row h2 .subheader, .row h3 .subheader, .row h4 .subheader, .row p .subheader, .row span .subheader {
     font-family: "Titillium Web", sans-serif;
+  }
+  /* line 240, ../_sass/foundation/components/_grid.scss */
+  .row h1 {
+    font-family: "Orbitron", sans-serif;
     font-size: 3.75rem;
   }
 }
@@ -996,173 +1000,177 @@ select {
     margin: 0;
   }
   /* line 235, ../_sass/foundation/components/_grid.scss */
-  .row h1 {
+  .row h1 .subheader, .row h2 .subheader, .row h3 .subheader, .row h4 .subheader, .row p .subheader, .row span .subheader {
     font-family: "Titillium Web", sans-serif;
+  }
+  /* line 240, ../_sass/foundation/components/_grid.scss */
+  .row h1 {
+    font-family: "Orbitron", sans-serif;
     font-size: 3.75rem;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-0 {
     position: relative;
     left: 0%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-0 {
     position: relative;
     right: 0%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-1 {
     position: relative;
     left: 8.33333%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-1 {
     position: relative;
     right: 8.33333%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-2 {
     position: relative;
     left: 16.66667%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-2 {
     position: relative;
     right: 16.66667%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-3 {
     position: relative;
     left: 25%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-3 {
     position: relative;
     right: 25%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-4 {
     position: relative;
     left: 33.33333%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-4 {
     position: relative;
     right: 33.33333%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-5 {
     position: relative;
     left: 41.66667%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-5 {
     position: relative;
     right: 41.66667%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-6 {
     position: relative;
     left: 50%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-6 {
     position: relative;
     right: 50%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-7 {
     position: relative;
     left: 58.33333%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-7 {
     position: relative;
     right: 58.33333%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-8 {
     position: relative;
     left: 66.66667%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-8 {
     position: relative;
     right: 66.66667%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-9 {
     position: relative;
     left: 75%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-9 {
     position: relative;
     right: 75%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-10 {
     position: relative;
     left: 83.33333%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-10 {
     position: relative;
     right: 83.33333%;
     left: auto;
   }
 
-  /* line 273, ../_sass/foundation/components/_grid.scss */
+  /* line 278, ../_sass/foundation/components/_grid.scss */
   .push-11 {
     position: relative;
     left: 91.66667%;
     right: auto;
   }
 
-  /* line 276, ../_sass/foundation/components/_grid.scss */
+  /* line 281, ../_sass/foundation/components/_grid.scss */
   .pull-11 {
     position: relative;
     right: 91.66667%;
@@ -1536,173 +1544,177 @@ select {
     margin: 0;
   }
   /* line 235, ../_sass/foundation/components/_grid.scss */
-  .row h1 {
+  .row h1 .subheader, .row h2 .subheader, .row h3 .subheader, .row h4 .subheader, .row p .subheader, .row span .subheader {
     font-family: "Titillium Web", sans-serif;
+  }
+  /* line 240, ../_sass/foundation/components/_grid.scss */
+  .row h1 {
+    font-family: "Orbitron", sans-serif;
     font-size: 3.75rem;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-0 {
     position: relative;
     left: 0%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-0 {
     position: relative;
     right: 0%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-1 {
     position: relative;
     left: 8.33333%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-1 {
     position: relative;
     right: 8.33333%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-2 {
     position: relative;
     left: 16.66667%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-2 {
     position: relative;
     right: 16.66667%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-3 {
     position: relative;
     left: 25%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-3 {
     position: relative;
     right: 25%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-4 {
     position: relative;
     left: 33.33333%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-4 {
     position: relative;
     right: 33.33333%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-5 {
     position: relative;
     left: 41.66667%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-5 {
     position: relative;
     right: 41.66667%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-6 {
     position: relative;
     left: 50%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-6 {
     position: relative;
     right: 50%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-7 {
     position: relative;
     left: 58.33333%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-7 {
     position: relative;
     right: 58.33333%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-8 {
     position: relative;
     left: 66.66667%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-8 {
     position: relative;
     right: 66.66667%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-9 {
     position: relative;
     left: 75%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-9 {
     position: relative;
     right: 75%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-10 {
     position: relative;
     left: 83.33333%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-10 {
     position: relative;
     right: 83.33333%;
     left: auto;
   }
 
-  /* line 284, ../_sass/foundation/components/_grid.scss */
+  /* line 289, ../_sass/foundation/components/_grid.scss */
   .push-11 {
     position: relative;
     left: 91.66667%;
     right: auto;
   }
 
-  /* line 287, ../_sass/foundation/components/_grid.scss */
+  /* line 292, ../_sass/foundation/components/_grid.scss */
   .pull-11 {
     position: relative;
     right: 91.66667%;
@@ -4025,7 +4037,7 @@ form .row textarea.columns {
 /* line 385, ../_sass/foundation/components/_forms.scss */
 label {
   font-size: 0.875rem;
-  color: #4d4d4d;
+  color: #5d5d5d;
   cursor: pointer;
   display: block;
   font-weight: normal;
@@ -4046,7 +4058,7 @@ label.inline {
 /* line 389, ../_sass/foundation/components/_forms.scss */
 label small {
   text-transform: capitalize;
-  color: #676767;
+  color: #757575;
 }
 
 /* Attach elements to the beginning or end of an input */
@@ -4427,7 +4439,7 @@ span.error, small.error {
 }
 /* line 553, ../_sass/foundation/components/_forms.scss */
 .error > label > small {
-  color: #676767;
+  color: #757575;
   background: transparent;
   padding: 0;
   text-transform: capitalize;
@@ -5764,8 +5776,8 @@ ul.pagination li {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #000000;
-  background: rgba(0, 0, 0, 0.45);
+  background: #171717;
+  background: rgba(23, 23, 23, 0.45);
   z-index: 1004;
   display: none;
   left: 0;
@@ -5784,7 +5796,7 @@ ul.pagination li {
   background-color: #FFFFFF;
   padding: 1.875rem;
   border: solid 1px #666666;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(23, 23, 23, 0.4);
 }
 @media only screen and (max-width: 40em) {
   /* line 171, ../_sass/foundation/components/_reveal.scss */
@@ -6521,7 +6533,7 @@ table tr td {
   display: inline-block;
   border: solid 4px #FFFFFF;
   max-width: 100%;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.2);
   transition: all 200ms ease-out;
 }
 /* line 48, ../_sass/foundation/components/_thumbs.scss */
@@ -6652,7 +6664,7 @@ meta.foundation-mq-topbar {
 /* line 122, ../_sass/foundation/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #222222;
+  background: #171717;
 }
 /* line 126, ../_sass/foundation/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -6692,7 +6704,7 @@ meta.foundation-mq-topbar {
   height: 3.75rem;
   line-height: 3.75rem;
   position: relative;
-  background: #222222;
+  background: #171717;
   margin-bottom: 0;
 }
 /* line 165, ../_sass/foundation/components/_top-bar.scss */
@@ -6743,7 +6755,7 @@ meta.foundation-mq-topbar {
 }
 /* line 209, ../_sass/foundation/components/_top-bar.scss */
 .top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Orbitron", sans-serif;
   line-height: 3.75rem;
   font-size: 1.25rem;
   margin: 0;
@@ -6810,7 +6822,7 @@ meta.foundation-mq-topbar {
 }
 /* line 280, ../_sass/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: #222222;
+  background: #171717;
 }
 /* line 283, ../_sass/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -6840,7 +6852,7 @@ meta.foundation-mq-topbar {
 /* line 312, ../_sass/foundation/components/_top-bar.scss */
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
-  border-top: solid 1px #111111;
+  border-top: solid 1px #0c0c0c;
   clear: both;
   height: 1px;
   width: 100%;
@@ -7134,7 +7146,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 40.063em) {
   /* line 461, ../_sass/foundation/components/_top-bar.scss */
   .top-bar {
-    background: #222222;
+    background: #171717;
     overflow: visible;
   }
   /* line 172, ../_sass/foundation/components/_global.scss */
@@ -7174,7 +7186,7 @@ meta.foundation-mq-topbar {
   }
   /* line 485, ../_sass/foundation/components/_top-bar.scss */
   .top-bar.expanded {
-    background: #222222;
+    background: #171717;
   }
 
   /* line 488, ../_sass/foundation/components/_top-bar.scss */
@@ -7213,7 +7225,7 @@ meta.foundation-mq-topbar {
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 1.25rem;
     line-height: 3.75rem;
-    background: #222222;
+    background: #171717;
   }
   /* line 524, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -7330,14 +7342,14 @@ meta.foundation-mq-topbar {
   .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #3f3f3f;
+    border-right: solid 1px #353535;
     clear: none;
     height: 3.75rem;
     width: 0;
   }
   /* line 642, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: #222222;
+    background: #171717;
     padding: 0 1.25rem;
     height: 3.75rem;
   }
@@ -7688,10 +7700,10 @@ p aside {
 /* Default header styles */
 /* line 252, ../_sass/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #EEEEEE;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -7700,7 +7712,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 262, ../_sass/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #f4f4f4;
   line-height: 0;
 }
 
@@ -7737,7 +7749,7 @@ h6 {
 /* line 276, ../_sass/foundation/components/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #f4f4f4;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -7897,7 +7909,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #555555;
+  color: #f2f2f2;
 }
 /* line 408, ../_sass/foundation/components/_type.scss */
 blockquote cite:before {
@@ -7906,14 +7918,14 @@ blockquote cite:before {
 /* line 412, ../_sass/foundation/components/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #f2f2f2;
 }
 
 /* line 418, ../_sass/foundation/components/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #f4f4f4;
 }
 
 /* Microformats */
@@ -8222,7 +8234,7 @@ ul.off-canvas-list li a:hover {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: -4px 0 4px rgba(23, 23, 23, 0.5), 4px 0 4px rgba(23, 23, 23, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -8254,7 +8266,7 @@ ul.off-canvas-list li a:hover {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: -4px 0 4px rgba(23, 23, 23, 0.5), 4px 0 4px rgba(23, 23, 23, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -8286,7 +8298,7 @@ ul.off-canvas-list li a:hover {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: -4px 0 4px rgba(23, 23, 23, 0.5), 4px 0 4px rgba(23, 23, 23, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -8318,7 +8330,7 @@ ul.off-canvas-list li a:hover {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: -4px 0 4px rgba(23, 23, 23, 0.5), 4px 0 4px rgba(23, 23, 23, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -8350,7 +8362,7 @@ ul.off-canvas-list li a:hover {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: -4px 0 4px rgba(23, 23, 23, 0.5), 4px 0 4px rgba(23, 23, 23, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -9022,7 +9034,7 @@ th.hide-for-touch {
   /* line 403, ../_sass/foundation/components/_visibility.scss */
   * {
     background: transparent !important;
-    color: #000000 !important;
+    color: #171717 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -9193,4 +9205,8 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important;
   }
+}
+/* line 3, ../_sass/custom.scss */
+.home-item :hover {
+  background: #000;
 }

@@ -226,14 +226,19 @@ $last-child-float: $opposite-direction !default;
 		}
 
     h1, h2, h3, h4, p, span {
-      font-family: $font-family-sans-serif;
+      // font-family: $font-family-sans-serif;
+      font-family: $font-family-titillium;
       font-weight: $font-weight-bold;
       color: $smoke;
       margin: 0;
+
+      .subheader {
+        font-family: $font-family-titillium;
+      }
     }
 
     h1 {
-      font-family: $font-family-titillium;
+      font-family: $font-family-orbitron;
       font-size: $font-size-h1;
     }
 	}
