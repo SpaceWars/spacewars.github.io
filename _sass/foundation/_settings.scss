@@ -89,6 +89,11 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
+$font-family-titillium: 'Titillium Web', sans-serif;
+$font-family-play: 'Titillium Web', sans-serif;
+$font-family-orbitron: 'Titillium Web', sans-serif;
+
+$font-family-sans-serif: $font-family-titillium;
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -96,6 +101,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to define default font weights
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
+$font-size-h1: rem-calc(60) !default;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -151,6 +157,7 @@ $body-font-color: $smoke;
 // $shiny-edge-size: 0 1px 0;
 // $shiny-edge-color: rgba($white, .5);
 // $shiny-edge-active-color: rgba($black, .2);
+
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -21,8 +21,9 @@ $topbar-height: rem-calc(60) !default;
 $topbar-margin-bottom: 0 !default;
 
 // Controlling the styles for the title in the top bar
-$topbar-title-weight: $font-weight-normal !default;
+$topbar-title-weight: $font-weight-bold!default;
 $topbar-title-font-size: rem-calc(20) !default;
+$topbar-title-font-family: $font-family-orbitron;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $white !default;
@@ -206,6 +207,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         // @if $topbar-menu-icon-position == $default-float {float: $opposite-direction;}
 
         h1, h2, h3, h4, p, span {
+          font-family: $font-family-orbitron;
           line-height: $topbar-height;
           font-size: $topbar-title-font-size;
           margin: 0;
