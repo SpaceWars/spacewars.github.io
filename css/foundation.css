@@ -7757,10 +7757,10 @@ h6 {
 
 /* line 278, ../_sass/foundation/components/_type.scss */
 hr {
-  border: solid #DDDDDD;
+  border: groove #444444;
   border-width: 1px 0 0;
   clear: both;
-  margin: 1.25rem 0 1.1875rem;
+  margin: 2.5rem 0 2.4375rem;
   height: 0;
 }
 
@@ -9206,7 +9206,12 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 3, ../_sass/custom.scss */
-.home-item :hover {
-  background: #000;
+/* line 4, ../_sass/_customclasses.scss */
+.home-item:hover {
+  background: #96281b;
+}
+
+/* line 9, ../_sass/_customclasses.scss */
+.home-item-icon {
+  width: 10 rem;
 }
