@@ -1,17 +1,17 @@
 ---
 layout: doc
 title: Documentação
-permalink: /documentacao/
+permalink: /manuais/
 ---
 
 <div class="row">
   <div class="headline">
-    <h1 class="headline__title">Documentação</h1>
+    <h1 class="headline__title">Manuais</h1>
   </div>
 </div>
 
 {% for post in site.posts %}
-  {% if post.category == "doc" %}
+  {% if post.category == "guide" %}
   <div class="row">
     <div class="small-12 medium-10 large-8 small-centered columns post-item">
         <div class="row">{{ post.date | date_to_long_string }}</div>
