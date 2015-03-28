@@ -15,7 +15,11 @@ body {
 .post-item {
     margin-bottom: 3rem;
 
-    :hover {
+    h3 {
+        color: $old-brick;
+    }
+
+    &:hover {
         h3 {
             background: rgba(white, 0.07);
         }
