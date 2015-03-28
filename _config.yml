@@ -8,10 +8,11 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://spacewars.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
-github_username:  
- - carloshfoliveira, 
+github_username:
+ - carloshfoliveira,
  - msfernandes,
  - Ziul
 
 # Build settings
 markdown: kramdown
+highlighter: pygments

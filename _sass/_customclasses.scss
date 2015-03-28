@@ -1,11 +1,17 @@
 
 
 .home-item {
+    margin-bottom: 3rem;
     &:hover {
-        background: $old-brick;
+        text-decoration: underline;
     }
 }
 
-.home-item-icon {
-    width: 10 rem;
+// .home-item-icon {
+//     width: 10 rem;
+// }
+
+.headline {
+  text-align: center;
+  margin: 50px 0;
 }

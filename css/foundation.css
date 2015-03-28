@@ -6664,7 +6664,7 @@ meta.foundation-mq-topbar {
 /* line 122, ../_sass/foundation/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #171717;
+  background: rgba(23, 23, 23, 0.7);
 }
 /* line 126, ../_sass/foundation/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -6704,7 +6704,7 @@ meta.foundation-mq-topbar {
   height: 3.75rem;
   line-height: 3.75rem;
   position: relative;
-  background: #171717;
+  background: rgba(23, 23, 23, 0.7);
   margin-bottom: 0;
 }
 /* line 165, ../_sass/foundation/components/_top-bar.scss */
@@ -6822,7 +6822,7 @@ meta.foundation-mq-topbar {
 }
 /* line 280, ../_sass/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: #171717;
+  background: rgba(23, 23, 23, 0.7);
 }
 /* line 283, ../_sass/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -7022,7 +7022,7 @@ meta.foundation-mq-topbar {
 /* line 358, ../_sass/foundation/components/_top-bar.scss */
 .top-bar-section ul li:hover:not(.has-form) > a {
   background-color: #555555;
-  background: #96281b;
+  background: rgba(150, 40, 27, 0.5);
   color: #FFFFFF;
 }
 /* line 367, ../_sass/foundation/components/_top-bar.scss */
@@ -7146,7 +7146,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 40.063em) {
   /* line 461, ../_sass/foundation/components/_top-bar.scss */
   .top-bar {
-    background: #171717;
+    background: rgba(23, 23, 23, 0.7);
     overflow: visible;
   }
   /* line 172, ../_sass/foundation/components/_global.scss */
@@ -7186,7 +7186,7 @@ meta.foundation-mq-topbar {
   }
   /* line 485, ../_sass/foundation/components/_top-bar.scss */
   .top-bar.expanded {
-    background: #171717;
+    background: rgba(23, 23, 23, 0.7);
   }
 
   /* line 488, ../_sass/foundation/components/_top-bar.scss */
@@ -7218,19 +7218,19 @@ meta.foundation-mq-topbar {
   /* line 511, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section li.hover > a:not(.button) {
     background-color: #555555;
-    background: #96281b;
+    background: rgba(150, 40, 27, 0.5);
     color: #FFFFFF;
   }
   /* line 520, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 1.25rem;
     line-height: 3.75rem;
-    background: #171717;
+    background: rgba(23, 23, 23, 0.7);
   }
   /* line 524, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     background-color: #555555;
-    background: #96281b;
+    background: rgba(150, 40, 27, 0.5);
   }
   /* line 533, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -7349,7 +7349,7 @@ meta.foundation-mq-topbar {
   }
   /* line 642, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: #171717;
+    background: rgba(23, 23, 23, 0.7);
     padding: 0 1.25rem;
     height: 3.75rem;
   }
@@ -7375,7 +7375,7 @@ meta.foundation-mq-topbar {
   /* line 672, ../_sass/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:hover > a {
     background-color: #555555;
-    background: #96281b;
+    background: rgba(150, 40, 27, 0.5);
     color: #FFFFFF;
   }
   /* line 681, ../_sass/foundation/components/_top-bar.scss */
@@ -9206,12 +9206,17 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 4, ../_sass/_customclasses.scss */
+/* line 3, ../_sass/_customclasses.scss */
+.home-item {
+  margin-bottom: 3rem;
+}
+/* line 5, ../_sass/_customclasses.scss */
 .home-item:hover {
-  background: #96281b;
+  text-decoration: underline;
 }
 
-/* line 9, ../_sass/_customclasses.scss */
-.home-item-icon {
-  width: 10 rem;
+/* line 14, ../_sass/_customclasses.scss */
+.headline {
+  text-align: center;
+  margin: 50px 0;
 }

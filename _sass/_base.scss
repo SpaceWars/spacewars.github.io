@@ -20,6 +20,9 @@ body {
     font-weight: 300;
     color: $text-color;
     background-color: $background-color;
+    background-image: url("../img/bg-space.png");
+    background-size: 10%;
+    background-position: center;
     -webkit-text-size-adjust: 100%;
 }
 
