@@ -1,4 +1,9 @@
+@import "foundation/settings";
 
+body {
+    font-family: $font-family-titillium;
+    color: $smoke;
+}
 
 .home-item {
     margin-bottom: 3rem;
@@ -7,9 +12,15 @@
     }
 }
 
-// .home-item-icon {
-//     width: 10 rem;
-// }
+.post-item {
+    margin-bottom: 3rem;
+
+    :hover {
+        h3 {
+            background: rgba(white, 0.07);
+        }
+    }
+}
 
 .headline {
   text-align: center;

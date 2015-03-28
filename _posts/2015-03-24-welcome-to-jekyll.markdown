@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: doc
 title:  "Testando essa parada de jekyll"
 date:   2015-03-24 22:23:52
-categories: jekyll update
+category: outra
 ---
 
 Olha só que maneiro esse .md que virou uma página marota aqui no github.io!

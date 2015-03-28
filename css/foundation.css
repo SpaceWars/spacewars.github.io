@@ -1,3 +1,4 @@
+@import url(foundation/settings);
 /* line 348, ../_sass/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.1/";
@@ -6859,7 +6860,7 @@ meta.foundation-mq-topbar {
 }
 /* line 320, ../_sass/foundation/components/_top-bar.scss */
 .top-bar-section ul li {
-  background: #2a2a2a;
+  background: rgba(23, 23, 23, 0.7);
 }
 /* line 322, ../_sass/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a {
@@ -7315,23 +7316,23 @@ meta.foundation-mq-topbar {
     line-height: 3.75rem;
     white-space: nowrap;
     padding: 12px 1.25rem;
-    background: #2a2a2a;
+    background: rgba(23, 23, 23, 0.7);
   }
   /* line 605, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
     color: #FFFFFF;
-    background: #2a2a2a;
+    background: rgba(23, 23, 23, 0.7);
   }
   /* line 610, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
     color: #FFFFFF;
     background-color: #555555;
-    background: #2a2a2a;
+    background: rgba(23, 23, 23, 0.7);
   }
   /* line 619, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li label {
     white-space: nowrap;
-    background: #2a2a2a;
+    background: rgba(23, 23, 23, 0.7);
   }
   /* line 625, ../_sass/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li .dropdown {
@@ -9207,15 +9208,20 @@ th.hide-for-touch {
   }
 }
 /* line 3, ../_sass/_customclasses.scss */
+body {
+  color: #EEEEEE;
+}
+
+/* line 7, ../_sass/_customclasses.scss */
 .home-item {
   margin-bottom: 3rem;
 }
-/* line 5, ../_sass/_customclasses.scss */
+/* line 9, ../_sass/_customclasses.scss */
 .home-item:hover {
   text-decoration: underline;
 }
 
-/* line 14, ../_sass/_customclasses.scss */
+/* line 18, ../_sass/_customclasses.scss */
 .headline {
   text-align: center;
   margin: 50px 0;
