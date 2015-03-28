@@ -5,6 +5,24 @@ body {
     color: $smoke;
 }
 
+.row {
+
+    p {
+        font-weight: normal;
+    }
+
+    blockquote, img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        p {
+            position: center;
+            font-size: 1.5rem;
+            color: rgba($smoke, 0.5);
+    }
+}
+}
+
 .home-item {
     margin-bottom: 3rem;
     &:hover {
@@ -30,3 +48,8 @@ body {
   text-align: center;
   margin: 50px 0;
 }
+
+.text-bold {
+    font-weight: bold !important;
+}
+

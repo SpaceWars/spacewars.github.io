@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: post
 title:  "Testando essa parada de jekyll"
 date:   2015-03-24 22:23:52
 category: outra
