@@ -9,7 +9,7 @@ description: Ideias iniciais e de concepção do jogo
 #Game Concept
 ---
 
-###Space Wars
+###SpaceWars
 
 ###Plataforma
 Linux e MAC
