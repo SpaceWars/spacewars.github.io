@@ -9,23 +9,23 @@ description: Ideias iniciais e de concepção do jogo
 #Game Concept
 ---
 
-###Nome do Jogo
+###Space Wars
 
 ###Plataforma
-Onde irá rodar?
+Linux e MAC
 
 ###Jogadores
-Quantos players?
+1 Jogador
 
 ###Gênero
-Qual tipo de jogo?
+Tiro
 
 ###High Concept
 Conceito geral do jogo. Conte um pouco da história, missão do jogador, ações que
  podem ser feitas
 
 ###Objetivo
-Qual o objetivo para vencer no game?
+Chegar ate o final da fase sem ser atingido por tiros ou colidir com outros objetos.
 
 ###Recursos
 É um aprofundamento das fases de High Concept e Objetivo.
