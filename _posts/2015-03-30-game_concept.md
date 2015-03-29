@@ -12,7 +12,7 @@ description: Ideias iniciais e de concepção do jogo
 ###SpaceWars
 
 ###Plataforma
-Linux e MAC
+Linux
 
 ###Jogadores
 1 Jogador
