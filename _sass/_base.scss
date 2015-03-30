@@ -19,10 +19,12 @@ body {
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
-    background-color: $background-color;
-    background-image: url("../img/space.jpg");
-    background-size: 90%;
+    background-color: black;
+    background-image: url("../img/black_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position: center;
+    background-attachment: fixed;
     -webkit-text-size-adjust: 100%;
 }
 
