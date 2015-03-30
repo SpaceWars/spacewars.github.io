@@ -28,3 +28,12 @@ Chegar ate o final da fase sem ser atingido por tiros ou colidir com outros obje
 
 ###Recursos
 Baseado no estilo [Space Invaders](http://en.wikipedia.org/wiki/Space_Invaders), o jogo possuiu um cenceito simples e objetivo: A destruição da frota inimiga. Para tal o jogador deve, alem de disparar inumeros tiros contra os inimigos, evitar ser alvejado por disparos vindos do computador. Há também a necessidade de se evitar a colisão com objetos que se pode encontrar no espaço.
+
+###Conceitos iniciais do jogo
+
+Conceito inicial sobre uma parte jogável
+![Conceito - Fase](../img/concept-1.jpg "Conceito - Fase")
+
+Conceito inicial sobre menu
+
+![Conceito - Menu](../img/concept-2.jpg "Conceito - Menu")
