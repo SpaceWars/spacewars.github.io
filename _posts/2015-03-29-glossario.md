@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Glossário"
-date:   2015-03-24 22:23:52
+date:   2015-03-29 22:23:52
 category: guide
 ---
 
