@@ -32,8 +32,11 @@ Baseado no estilo [Space Invaders](http://en.wikipedia.org/wiki/Space_Invaders),
 ###Conceitos iniciais do jogo
 
 Conceito inicial sobre uma parte jogável
-![Conceito - Fase](../img/concept-1.jpg "Conceito - Fase")
-
+<center>
+    <img src="/img/concept-1.jpg" alt="Conceito - Fase" width="60%" />
+</center>
 Conceito inicial sobre menu
 
-![Conceito - Menu](../img/concept-2.jpg "Conceito - Menu")
+<center>
+    <img src="/img/concept-2.jpg" alt="Conceito - Menu" width="60%" />
+</center>
