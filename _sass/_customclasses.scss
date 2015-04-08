@@ -53,3 +53,29 @@ body {
     font-weight: bold !important;
 }
 
+.panel {
+    background-color: transparent;
+    color: $smoke;
+
+    h1, h2, h3, h4 {
+        color: $smoke;
+    }
+}
+
+table {
+    color: $smoke !important;
+    background-color: transparent;
+
+    tr > td {
+        background-color: transparent;
+        color: $smoke;
+    }
+
+    thead tr th {
+        background-color: rgba(black, 0.1);
+    }
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(2n) {
+    background-color: transparent;
+}

@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Glossário"
-date:   2015-03-29 22:23:52
-category: guide
+date:   2015-03-30 22:23:52
+category: manual
 ---
 
 # Glossário
@@ -43,3 +43,11 @@ Também conhecido por "jogo de tiro", é uma categoria onde o objetivo é atirar
 <h3 id="markdown"> Markdown </h3>
 
 Linguagem de marcação amplamente utilizada para redigir documentos online por sua simplicidade e ao mesmo tempo facilidade em se gerar outros tipos de documentos a a partir do seu conteúdo. Por padrão é utilizada para gerar arquivos XHTML, mas é possível também gerar, através de programas como [Pandoc](http://en.wikipedia.org/wiki/Pandoc), arquivos LaTeX, man, HTML5, doc, entre outros.
+
+<h3 id="framework"> Framework</h3>
+
+Uma abstração que une códigos comuns entre vários projetos de software provendo uma funcionalidade genérica. Um framework pode atingir uma funcionalidade específica, por configuração, durante a programação de uma aplicação.
+
+<h3 id="biblioteca"> Biblioteca</h3>
+
+Uma coleção de subprogramas utilizados no desenvolvimento de software. Bibliotecas contém código e dados auxiliares, que provém serviços a programas independentes, o que permite o compartilhamento e a alteração de código e dados de forma modular.
