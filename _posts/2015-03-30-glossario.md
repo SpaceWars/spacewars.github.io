@@ -51,3 +51,8 @@ Uma abstração que une códigos comuns entre vários projetos de software prove
 <h3 id="biblioteca"> Biblioteca</h3>
 
 Uma coleção de subprogramas utilizados no desenvolvimento de software. Bibliotecas contém código e dados auxiliares, que provém serviços a programas independentes, o que permite o compartilhamento e a alteração de código e dados de forma modular.
+
+<h3 id="biblioteca"> Oldschool</h3>
+
+Na gíria, "old school" ou "Old Skool" pode se referir a qualquer coisa que seja de uma época anterior ou qualquer coisa que possa ser considerado "antiquado". O termo é comumente usado para sugerir um grande respeito por algo que tem sido demonstrado que têm valor ou qualidade duradoura. "
+
