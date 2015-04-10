@@ -16,3 +16,6 @@ github_username:
 # Build settings
 markdown: kramdown
 highlighter: pygments
+gems: [jekyll-mermaid]
+mermaid:
+  src: '/js/mermaid.full.js'
