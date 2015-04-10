@@ -1,0 +1,77 @@
+
+
+.actor {
+    stroke: #CCCCFF;
+    fill: #ECECFF;
+}
+text.actor {
+    fill:black;
+    stroke:none;
+    font-family: $font-family-titillium;
+}
+
+.actor-line {
+    stroke:white;
+}
+
+.messageLine0 {
+    stroke-width:1.5;
+    stroke-dasharray: "2 2";
+    marker-end:"url(#arrowhead)";
+    stroke:white;
+}
+
+.messageLine1 {
+    stroke-width:1.5;
+    stroke-dasharray: "2 2";
+    stroke:white;
+}
+
+#arrowhead {
+    fill:white;
+
+}
+
+.messageText {
+    fill:white;
+    stroke:none;
+    font-family: $font-family-titillium;
+    font-size:14px;
+}
+
+.labelBox {
+    stroke: #CCCCFF;
+    fill: #ECECFF;
+}
+
+.labelText {
+    fill:black;
+    stroke:none;
+    font-family: $font-family-titillium;
+}
+
+.loopText {
+    fill:black;
+    stroke:none;
+    font-family: $font-family-titillium;
+}
+
+.loopLine {
+    stroke-width:2;
+    stroke-dasharray: "2 2";
+    marker-end:"url(#arrowhead)";
+    stroke: #CCCCFF;
+}
+
+.note {
+    stroke: #decc93;
+    stroke: #CCCCFF;
+    fill: #fff5ad;
+}
+
+.noteText {
+    fill:black;
+    stroke:none;
+    font-family: $font-family-titillium;
+    font-size:14px;
+}
