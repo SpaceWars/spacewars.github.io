@@ -1,0 +1,8 @@
+g .node {
+  fill: rgba(0, 0, 0, 0);
+  stroke-width: 2px;
+}
+
+g .edgeLabel .label span[style] {
+  background: rgba(0, 0, 0, 0) !important;
+}
