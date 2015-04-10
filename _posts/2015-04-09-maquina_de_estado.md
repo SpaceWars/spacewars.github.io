@@ -7,19 +7,24 @@ description: Máquina de estado do jogo.
 ---
 
 <div class="row">
-  <div class="small-2 large-4 columns">
     <h3>Durante o jogo</h3>
+  <div class="small-11 small-centered columns">
     {% mermaid %}
-    graph TD
-      A((1<br>Início<hr>e: Inicia partida)) -->|Jogar| B((2<br>Jogando<br>e:Jogar))
-      B -->|Pausa partida| C((3<br>Pausa<hr>e: Pausa partida))
-      C -->|Volta a jogar| B
-      C -->|Reinicia partida| A
-      C -->|Fecha partida| D((4<br>Saída<hr>e: Fecha partida))
+      graph TD
+        A((1<br>Iniciando partida<br>e: Inicia partida)) -->|Inicia fase| B((2<br>Iniciando fase<br>e:Inicia fase))
+        B -->|Joga fase| C((3<br>Jogando<br>e: Joga fase))
+        C -->|Pausa| D((4<br>Jogo pausado<br>e: Pausa fase))
+        D -->|Volta ao jogo| C
+        D -->|Reinicia fase| B
+        C -->|Morre| E((5<br>Morto<br>e: Morre))
+        C -->|Conclui fase| F((6<br>Fase concluída<br>e: Conclui fase))
+        F -->|Inicia nova fase| B
+        E -->|Reinicia fase| B 
+        D -->|Termina partida| G((7<br>Partida terminada<br>e: Termina partida))
+        E -->|Termina partida| G
+        F -->|Termina partida| G
     {% endmermaid %}
   </div>
-  <div class="small-4 large-4 columns">
-  </div>
-  <div class="small-4 large-4 columns">
-  </div>
 </div>
+
+
