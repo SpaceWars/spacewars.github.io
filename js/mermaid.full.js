@@ -15914,13 +15914,13 @@ var svgDraw = require('./svgDraw');
 var conf = {
 
     diagramMarginX:50,
-    diagramMarginY:10,
+    diagramMarginY:80,
     // Margin between actors
     actorMargin:50,
     // Width of actor moxes
     width:150,
     // Height of actor boxes
-    height:65,
+    height:45,
     // Margin around loop boxes
     boxMargin:10,
     boxTextMargin:5,

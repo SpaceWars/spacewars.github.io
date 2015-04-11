@@ -1,8 +1,24 @@
 g .node {
   fill: rgba(0, 0, 0, 0);
+  stroke: #FEFEFE;
   stroke-width: 2px;
 }
 
+
 g .edgeLabel .label span[style] {
   background: rgba(0, 0, 0, 0) !important;
+  fill:white;
+  stroke:#FEFEFE;
+  font-family: $font-family-titillium;
+  font-size: 14px;
+}
+
+g .edgePaths {
+  stroke: #FEFEFE;
+  stroke-width: 3px;	
+}
+
+g .clusters{
+  stroke: #FEFEFE;
+  stroke-width: 3px;		
 }

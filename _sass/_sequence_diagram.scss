@@ -40,7 +40,7 @@ text.actor {
 }
 
 .labelBox {
-    stroke: #CCCCFF;
+    stroke: #FFCCFF;
     fill: #ECECFF;
 }
 
@@ -52,12 +52,12 @@ text.actor {
 
 .loopText {
     fill:black;
-    stroke:none;
+    stroke: #FFCCFF;
     font-family: $font-family-titillium;
 }
 
 .loopLine {
-    stroke-width:2;
+    stroke-width:1.5;
     stroke-dasharray: "2 2";
     marker-end:"url(#arrowhead)";
     stroke: #CCCCFF;
