@@ -9,6 +9,7 @@ description: Diagrama de Sequência do jogo referente às configurações.
 ### Diagrama de Sequência Configurações
 
 <div class="row">
+<br><br><br>
 <center>
   {% mermaid %}
   sequenceDiagram

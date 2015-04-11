@@ -26,5 +26,3 @@ description: Máquina de estado do jogo.
     {% endmermaid %}
   </div>
 </div>
-
-
