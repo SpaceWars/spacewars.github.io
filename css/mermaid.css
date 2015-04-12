@@ -13,7 +13,7 @@ g .edgeLabel .label span[style] {
   font-size: 14px;
 }
 
-g .edgePaths {
+g .edgePaths{
   stroke: #FEFEFE;
   stroke-width: 3px;	
 }
