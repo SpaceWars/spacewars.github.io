@@ -6,41 +6,29 @@ category: doc
 description: Contém o Documento de Arquitetura de Software (DAS) do jogo.
 ---
 
-# Introdução
+## Introdução
 
-[A introdução do Documento de Arquitetura de Software deve apresentar uma visão geral de todo o Documento de Arquitetura de Software. Ela deve incluir a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral do Documento de Arquitetura de Software.]
+No ano de 3500, os seres do planeta *Rohines* invadem a Terra em busca de água, algo que há muito já se tornara escasso e motivo para guerras intergalácticas. Nessa busca incansável, os *Rohinianos* destruíram parte do planeta e poucos seres humanos sobreviveram. Em **SpaceWars**, o jogador encorpora um dos poucos sobreviventes do Massacre *Rohiniano* e deve escapar da Terra e ir em direção à *Ascarth*, um planeta colonizado pelos seres humanos e um abrigo totalmente seguro. Mas para isso, o jogador deverá passar por toda a galáxia e enfrentar as piores raças inimigas que já viu!
 
 ### Finalidade
 
-Este documento apresenta uma visão geral abrangente da arquitetura do sistema e utiliza uma série de visões arquiteturais diferentes para ilustrar os diversos aspectos do sistema. Sua intenção é capturar e transmitir as decisões significativas do ponto de vista da arquitetura que foram tomadas em relação ao sistema.
-
-[Esta seção define a finalidade do Documento de Arquitetura de Software, na documentação geral do projeto, e contém uma breve descrição da estrutura do documento. Os públicos específicos do documento devem ser identificados, com uma indicação de como devem usá-lo.]
+Este documento fornece uma visão arquitetural abrangente do sistema, usando diversas visões de arquitetura para representar diferentes aspectos do sistema. O Objetivo deste documento é formalizar as decisões arquiteturais importantes do projeto.
 
 ### Escopo
 
-[Faça uma breve descrição da aplicação do Documento de Arquitetura de Software; o que é afetado ou influenciado por este documento.]
+Este Documento de Arquitetura se aplica ao desenvolvimento do jogo **SpaceWars**, que está sendo desenvolvido na disciplina de Desenho de Software, na UnB
 
-### Definições, Acrônimos e Abreviações
+## Representação da Arquitetura
 
-[Esta subseção deve apresentar as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Documento de Arquitetura de Software.Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]
+<center>
+    <img src="/img/arquitetura.png" alt="Diagrama de Arquitetura" width="100%" />
+</center>
 
-### Referências
+## Metas e Restrições de Arquitetura
 
-[Esta subseção deve apresentar uma lista completa de todos os documentos mencionados no Documento de Arquitetura de Software. Cada documento deve ser identificado por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes das quais é possível obter referências. Essas informações podem ser fornecidas por um anexo ou outro documento.]
+O jogo deve ser jogável em sistema operacional Linux e não requisitar placa de video dedicada. Deve conseguir manter o *framerate* mínimo de 30 fps e não requisitar mais que 1GB de RAM. A distribuissão deve ser gratuita sob licença GPL3, com direito ao código fonte.
 
-### Visão Geral
-
-[Esta subseção deve descrever o conteúdo restante do Documento de Arquitetura de Software e explicar como o Documento de Arquitetura de Software está organizado.]
-
-# Representação da Arquitetura
-
-[Esta seção descreve qual é a arquitetura de software do sistema atual e como ela é representada. Nas Visões de Casos de Uso, Lógica, do Processo, de Implantação e de Implementação, este documento enumera as visões necessárias e, para cada uma delas, explica os tipos de elementos do modelo que contém.]
-
-3 Metas e Restrições de Arquitetura
-
-[Esta seção descreve os requisitos de software e os objetivos que têm um impacto significativo na arquitetura, como proteção, segurança, privacidade, uso de um produto desenvolvido internamente e adquirido pronto para ser usado, portabilidade, distribuição e reutilização. Ela também captura as restrições especiais que podem ser aplicáveis: estratégia de design e implementação, ferramentas de desenvolvimento, estrutura das equipes, cronograma, código-fonte legado e assim por diante.]
-
-# Visão de Casos de Uso
+<!-- # Visão de Casos de Uso
 
 [Esta seção lista os casos de uso ou cenários do modelo de casos de uso se eles representam uma funcionalidade central e significativa do sistema final ou se têm uma ampla cobertura de arquitetura, ou seja, se experimentam muitos elementos arquiteturais ou se enfatizam ou ilustram um determinado ponto frágil da arquitetura.]
 
@@ -84,12 +72,13 @@ Para cada classe significativa no pacote, inclua o respectivo nome, uma breve de
 
 # Visão de Dados (opcional)
 
-[Uma descrição da perspectiva de armazenamento de dados persistentes do sistema. Esta seção será opcional se os dados persistentes forem poucos ou inexistentes ou se a conversão entre o Modelo de Design e o Modelo de Dados for trivial.]
+[Uma descrição da perspectiva de armazenamento de dados persistentes do sistema. Esta seção será opcional se os dados persistentes forem poucos ou inexistentes ou se a conversão entre o Modelo de Design e o Modelo de Dados for trivial.] -->
 
-# Tamanho e Desempenho
+## Tamanho e Desempenho
 
-[Uma descrição das principais características de dimensionamento do software que têm um impacto na arquitetura, bem como as restrições do desempenho desejado.]
+O Software final deve ser menor que 1GB e requisitarmenos de 1GB de RAM para executar com desempenho mínimo de 30fps.
 
-# Qualidade
+<!-- # Qualidade
 
 [Uma descrição de como a arquitetura do software contribui para todos os recursos (exceto a funcionalidade) do sistema: extensibilidade, confiabilidade, portabilidade e assim por diante. Se essas características tiverem significado especial, como, por exemplo, implicações de proteção, segurança ou privacidade, elas devem ser claramente delineadas.]
+ -->
