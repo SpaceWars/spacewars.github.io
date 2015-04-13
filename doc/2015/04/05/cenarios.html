@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Cenários | Space Wars </title>
+  <!-- <link rel="stylesheet" href="/css/sprockets-octicons.css"> -->
+  <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300|Play|Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+  <script src="/js/vendor/modernizr.js"></script>
+  <link rel="canonical" href="http://spacewars.github.io/doc/2015/04/05/cenarios.html">
+  <link rel="alternate" type="application/rss+xml" title="Space Wars" attr="http://spacewars.github.io/feed.xml">
+</head>
+
+
+    <body>
+        <header>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">SpaceWars</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="https://github.com/SpaceWars/spacewars"><img src="/img/icons/GitHub-Mark-Light-32px.png">  Código Fonte</a></li>
+        <li><a href="/documentacao/">Documentação</a></li>
+        <li><a href="/manuais/">Manuais</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>
+
+        <div class="row">
+          <div class="small-12 medium-10 large-10 small-centered columns">
+            <br>
+            <h1 id="cenrios">Cenários</h1>
+<hr />
+
+<p>Para ver o fluxo de cenários <a href="/doc/2015/04/05/fluxo.html">clique aqui</a>.</p>
+
+<h2 id="menu_inicial">1. MENU INICIAL</h2>
+<ul>
+  <li>Objetivo: Descrever menu inicial</li>
+  <li>Contexto: Usuário abre o jogo</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: -</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Jogador seleciona <a href="#iniciar_fase">INICIAR FASE</a>.</li>
+      <li>Jogador seleciona <a href="#configuracoes">CONFIGURAÇÕES</a>.</li>
+      <li>Jogador seleciona <a href="#creditos">CRÉDITOS</a>.</li>
+      <li>Jogador seleciona sair do jogo.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="iniciar_fase">2. INICIAR FASE</h2>
+<ul>
+  <li>Objetivo: Descrever preparativos para inicio do jogo</li>
+  <li>Contexto: Menu Inicial</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: -</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Jogador seleciona a fase desejada.
+        <ul>
+          <li>Restrição 1: Jogador precisa ter concluído pelo menos a primeira
+fase.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="dinamica_do_spacewars">3. DINÂMICA DO SPACEWARS</h2>
+<ul>
+  <li>Objetivo: Descrever a dinâmica do jogo</li>
+  <li>Contexto: Iniciar Fase</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: Spaceship, Aliens, detritos espaciais, Pontuação, tiro</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Jogador se a <a href="#movimenta_spaceship">MOVIMENTA SPACESHIP</a> na tela.</li>
+      <li>Jogador <a href="#atira">ATIRA</a>.</li>
+      <li>Se o jogador for atingido por um Alien ou algum detrito espacial,
+então o jogador <a href="#perde_o_jogo">PERDE O JOGO</a>.</li>
+      <li>Se o jogador chegar ao final da fase sem ser atingido por Aliens ou
+detritos, então o jogador <a href="#avanca_de_nivel">AVANÇA DE NÍVEL</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="movimenta_spaceship">4. MOVIMENTA SPACESHIP</h2>
+<ul>
+  <li>Objetivo: Descrever modo como a Spaceship se movimenta</li>
+  <li>Contexto: Dinâmica do SpaceWars</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: Spaceship</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Se o jogador aperta a tecla direcional para cima, então a Spaceship
+se move para frente.
+        <ul>
+          <li>Restrição: Spaceship não pode ultrapassar a metade da tela.</li>
+        </ul>
+      </li>
+      <li>Se o jogador aperta a tecla direcional para baixo, então a Spaceship
+se move para trás.
+        <ul>
+          <li>Restrição: O jogador não pode ultrapassar a base da tela.</li>
+        </ul>
+      </li>
+      <li>Se o jogador aperta a tecla direcional para direita, então a
+Spaceship se move para direita.
+        <ul>
+          <li>Restrição: O jogador não pode ultrapassar o lado direito da tela.</li>
+        </ul>
+      </li>
+      <li>Se o jogador aperta a tecla direcional para esquerda, então a
+Spaceship se move para esquerda.
+        <ul>
+          <li>Restrição: O jogador não pode ultrapassar o lado esquerdo da tela.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="atira">5. ATIRA</h2>
+<ul>
+  <li>Objetivo: Descrever comportamento do tiro</li>
+  <li>Contexto: Iniciar Fase</li>
+  <li>Atores: Jogador(Spaceship)</li>
+  <li>Recursos: Spaceship, Aliens, detritos espaciais, Pontuação, tiro</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Se o jogador pressionou a barra de espaço, então a Spaceship lança
+um tiro no espaço.</li>
+      <li>Se o tiro acertar um Alien, então o Alien morre.</li>
+      <li>Se o tiro acertar um detrito, então o detrito e destruído</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="perde_o_jogo">6. PERDE O JOGO</h2>
+<ul>
+  <li>Objetivo: Descrever a tela de fim de jogo</li>
+  <li>Contexto: Iniciar Fase</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: Spaceship, Aliens, detritos espaciais, Pontuação</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Jogador escolhe em <a href="#iniciar_fase">REINICIAR FASE</a>.</li>
+      <li>Jogador escolhe em sair do jogo.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="avanca_de_nivel">7. AVANÇA DE NÍVEL</h2>
+<ul>
+  <li>Objetivo: Descrever como o usuário ganha o jogo</li>
+  <li>Contexto: Iniciar Fase</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: Spaceship, Aliens, detritos espaciais, Pontuação</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Se o jogador jogar durante o tempo da fase, sem ser atingido por
+nenhum Alien nem detritos, então o jogador avança de nível.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="creditos">8. CRÉDITOS</h2>
+<ul>
+  <li>Objetivo: Descrever a tela de fim de jogo</li>
+  <li>Contexto: Iniciar Fase</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: Spaceship, Aliens, detritos espaciais, Pontuação</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Jogador visualiza informação dos responsáveis pelo jogo.</li>
+      <li>Jogador escolhe em voltar ao <a href="#menu_inicial">MENU INICIAL</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="configuracoes">9. CONFIGURAÇÕES</h2>
+<ul>
+  <li>Objetivo: Descrever a tela de opções de jogo</li>
+  <li>Contexto: Menu Inicial</li>
+  <li>Atores: Jogador</li>
+  <li>Recursos: -</li>
+  <li>
+    <p>Episódios:</p>
+
+    <ul>
+      <li>Jogador seleciona volume de som do jogo.</li>
+      <li>Jogador seleciona volume de música do jogo.</li>
+      <li>Jogador seleciona modo fullscreen.</li>
+      <li>Jogador escolhe em voltar ao <a href="#menu_inicial">MENU INICIAL</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+          </div>
+        </div>
+
+        <footer>
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.js"></script>
+  <script src="/js/foundation/foundation.topbar.js"></script>
+  <script src="/js/foundation/foundation.equalizer.js"></script>
+  <script src="/js/app.js"></script>
+</footer>
+
+    </body>
+</html>

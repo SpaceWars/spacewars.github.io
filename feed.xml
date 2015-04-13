@@ -1,30 +1,624 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Space Wars</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://spacewars.github.io/</link>
+    <atom:link href="http://spacewars.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 12 Apr 2015 23:15:16 -0300</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2015 23:15:16 -0300</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Documento de Arquitetura</title>
+        <description>&lt;h1 id=&quot;introduo&quot;&gt;Introdução&lt;/h1&gt;
+
+&lt;p&gt;[A introdução do Documento de Arquitetura de Software deve apresentar uma visão geral de todo o Documento de Arquitetura de Software. Ela deve incluir a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral do Documento de Arquitetura de Software.]&lt;/p&gt;
+
+&lt;h3 id=&quot;finalidade&quot;&gt;Finalidade&lt;/h3&gt;
+
+&lt;p&gt;Este documento apresenta uma visão geral abrangente da arquitetura do sistema e utiliza uma série de visões arquiteturais diferentes para ilustrar os diversos aspectos do sistema. Sua intenção é capturar e transmitir as decisões significativas do ponto de vista da arquitetura que foram tomadas em relação ao sistema.&lt;/p&gt;
+
+&lt;p&gt;[Esta seção define a finalidade do Documento de Arquitetura de Software, na documentação geral do projeto, e contém uma breve descrição da estrutura do documento. Os públicos específicos do documento devem ser identificados, com uma indicação de como devem usá-lo.]&lt;/p&gt;
+
+&lt;h3 id=&quot;escopo&quot;&gt;Escopo&lt;/h3&gt;
+
+&lt;p&gt;[Faça uma breve descrição da aplicação do Documento de Arquitetura de Software; o que é afetado ou influenciado por este documento.]&lt;/p&gt;
+
+&lt;h3 id=&quot;definies-acrnimos-e-abreviaes&quot;&gt;Definições, Acrônimos e Abreviações&lt;/h3&gt;
+
+&lt;p&gt;[Esta subseção deve apresentar as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Documento de Arquitetura de Software.Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]&lt;/p&gt;
+
+&lt;h3 id=&quot;referncias&quot;&gt;Referências&lt;/h3&gt;
+
+&lt;p&gt;[Esta subseção deve apresentar uma lista completa de todos os documentos mencionados no Documento de Arquitetura de Software. Cada documento deve ser identificado por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes das quais é possível obter referências. Essas informações podem ser fornecidas por um anexo ou outro documento.]&lt;/p&gt;
+
+&lt;h3 id=&quot;viso-geral&quot;&gt;Visão Geral&lt;/h3&gt;
+
+&lt;p&gt;[Esta subseção deve descrever o conteúdo restante do Documento de Arquitetura de Software e explicar como o Documento de Arquitetura de Software está organizado.]&lt;/p&gt;
+
+&lt;h1 id=&quot;representao-da-arquitetura&quot;&gt;Representação da Arquitetura&lt;/h1&gt;
+
+&lt;p&gt;[Esta seção descreve qual é a arquitetura de software do sistema atual e como ela é representada. Nas Visões de Casos de Uso, Lógica, do Processo, de Implantação e de Implementação, este documento enumera as visões necessárias e, para cada uma delas, explica os tipos de elementos do modelo que contém.]&lt;/p&gt;
+
+&lt;p&gt;3 Metas e Restrições de Arquitetura&lt;/p&gt;
+
+&lt;p&gt;[Esta seção descreve os requisitos de software e os objetivos que têm um impacto significativo na arquitetura, como proteção, segurança, privacidade, uso de um produto desenvolvido internamente e adquirido pronto para ser usado, portabilidade, distribuição e reutilização. Ela também captura as restrições especiais que podem ser aplicáveis: estratégia de design e implementação, ferramentas de desenvolvimento, estrutura das equipes, cronograma, código-fonte legado e assim por diante.]&lt;/p&gt;
+
+&lt;h1 id=&quot;viso-de-casos-de-uso&quot;&gt;Visão de Casos de Uso&lt;/h1&gt;
+
+&lt;p&gt;[Esta seção lista os casos de uso ou cenários do modelo de casos de uso se eles representam uma funcionalidade central e significativa do sistema final ou se têm uma ampla cobertura de arquitetura, ou seja, se experimentam muitos elementos arquiteturais ou se enfatizam ou ilustram um determinado ponto frágil da arquitetura.]&lt;/p&gt;
+
+&lt;h3 id=&quot;realizaes-de-casos-de-uso&quot;&gt;Realizações de Casos de Uso&lt;/h3&gt;
+
+&lt;p&gt;[Esta seção ilustra o funcionamento do software, apresentando algumas realizações (ou cenários) de casos de uso selecionadas e explica como os diversos elementos do modelo de design contribuem para a respectiva funcionalidade.]&lt;/p&gt;
+
+&lt;h1 id=&quot;viso-lgica&quot;&gt;Visão Lógica&lt;/h1&gt;
+
+&lt;p&gt;[Esta seção descreve as partes significativas do ponto de vista da arquitetura do modelo de design, como sua divisão em subsistemas e pacotes. Além disso, para cada pacote significativo, ela mostra sua divisão em classes e utilitários de classe. Apresente as classes significativas do ponto de vista da arquitetura e descreva suas responsabilidades, bem como alguns relacionamentos, operações e atributos de grande importância.]&lt;/p&gt;
+
+&lt;h3 id=&quot;viso-geral-1&quot;&gt;Visão Geral&lt;/h3&gt;
+
+&lt;p&gt;[Esta subseção descreve toda a decomposição do modelo de design em termos de camadas e de hierarquia de pacotes.]&lt;/p&gt;
+
+&lt;h3 id=&quot;pacotes-de-design-significativos-do-ponto-de-vista-da-arquitetura&quot;&gt;Pacotes de Design Significativos do Ponto de Vista da Arquitetura&lt;/h3&gt;
+
+&lt;p&gt;[Para cada pacote significativo, inclua uma subseção com o respectivo nome, uma breve descrição e um diagrama com todos os pacotes e classes significativos nele contidos.&lt;/p&gt;
+
+&lt;p&gt;Para cada classe significativa no pacote, inclua o respectivo nome, uma breve descrição e, opcionalmente, uma descrição de algumas de suas responsabilidades, operações e atributos mais importantes.]&lt;/p&gt;
+
+&lt;h1 id=&quot;viso-de-processos&quot;&gt;Visão de Processos&lt;/h1&gt;
+
+&lt;p&gt;[Esta seção descreve a decomposição do sistema em processos leves (threads simples de controle) e processos pesados (agrupamentos de processos leves). Organize a seção em grupos de processos que se comunicam ou interagem. Descreva os modos principais de comunicação entre processos, como transmissão de mensagens e interrupções.]&lt;/p&gt;
+
+&lt;h1 id=&quot;viso-de-implantao&quot;&gt;Visão de Implantação&lt;/h1&gt;
+
+&lt;p&gt;[Esta seção descreve uma ou mais configurações da rede física (hardware) na qual o software é implantado e executado. Ela é uma visão do Modelo de Implantação. Para cada configuração, ela deve indicar no mínimo os nós físicos (computadores, CPUs) que executam o software e as respectivas interconexões (barramento, LAN, ponto a ponto e assim por diante.) Inclua também um mapeamento dos processos da Visão de Processos nos nós físicos.]&lt;/p&gt;
+
+&lt;h1 id=&quot;viso-de-implementao&quot;&gt;Visão de Implementação&lt;/h1&gt;
+
+&lt;p&gt;[Esta seção descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.]&lt;/p&gt;
+
+&lt;h3 id=&quot;viso-geral-2&quot;&gt;Visão Geral&lt;/h3&gt;
+
+&lt;p&gt;[Esta subseção nomeia e define as diversas camadas e o seu conteúdo, as regras que determinam a inclusão em uma camada específica e as fronteiras entre as camadas. Inclua um diagrama de componentes que mostre os relacionamentos entre as camadas. ]&lt;/p&gt;
+
+&lt;h3 id=&quot;camadas&quot;&gt;Camadas&lt;/h3&gt;
+
+&lt;p&gt;[Para cada camada, inclua uma subseção com o respectivo nome, uma lista dos subsistemas localizados na camada e um diagrama de componentes.]&lt;/p&gt;
+
+&lt;h1 id=&quot;viso-de-dados-opcional&quot;&gt;Visão de Dados (opcional)&lt;/h1&gt;
+
+&lt;p&gt;[Uma descrição da perspectiva de armazenamento de dados persistentes do sistema. Esta seção será opcional se os dados persistentes forem poucos ou inexistentes ou se a conversão entre o Modelo de Design e o Modelo de Dados for trivial.]&lt;/p&gt;
+
+&lt;h1 id=&quot;tamanho-e-desempenho&quot;&gt;Tamanho e Desempenho&lt;/h1&gt;
+
+&lt;p&gt;[Uma descrição das principais características de dimensionamento do software que têm um impacto na arquitetura, bem como as restrições do desempenho desejado.]&lt;/p&gt;
+
+&lt;h1 id=&quot;qualidade&quot;&gt;Qualidade&lt;/h1&gt;
+
+&lt;p&gt;[Uma descrição de como a arquitetura do software contribui para todos os recursos (exceto a funcionalidade) do sistema: extensibilidade, confiabilidade, portabilidade e assim por diante. Se essas características tiverem significado especial, como, por exemplo, implicações de proteção, segurança ou privacidade, elas devem ser claramente delineadas.]&lt;/p&gt;
+</description>
+        <pubDate>Sat, 11 Apr 2015 07:00:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/11/arquitetura.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/11/arquitetura.html</guid>
+        
+        
+        <category>doc</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Caso de Uso</title>
+        <description>&lt;h1 id=&quot;caso-de-uso&quot;&gt;Caso de Uso&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;center&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/SpaceWars/spacewars.github.io/master/img/_ucSpaceWars.png&quot; alt=&quot;Caso de Uso&quot; width=&quot;50%&quot; /&gt;
+&lt;/center&gt;
+</description>
+        <pubDate>Fri, 10 Apr 2015 11:11:00 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/10/use_case.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/10/use_case.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Modelo de Domínio</title>
+        <description>&lt;h3 id=&quot;modelo-de-domnio&quot;&gt;Modelo de Domínio&lt;/h3&gt;
+
+&lt;center&gt;
+    &lt;img src=&quot;/img/Domain.png&quot; alt=&quot;Domain&quot; width=&quot;400%&quot; /&gt;
+&lt;/center&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2015 20:12:00 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/09/diagram_domain.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/09/diagram_domain.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Diagrama de Sequência</title>
+        <description>&lt;h3 id=&quot;diagrama-de-sequncia-configuraes&quot;&gt;Diagrama de Sequência Configurações&lt;/h3&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;center&gt;
+  &lt;script src=&quot;/js/mermaid.full.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt;
+  sequenceDiagram
+    Jogador-&amp;gt;&amp;gt;Game: 1: toMainMenu()
+    Game-&amp;gt;&amp;gt;Cena: 1.1: makeCene()
+    Cena--&amp;gt;Game:
+    Game--&amp;gt;Jogador:
+    loop Jogando
+        Jogador-&amp;gt;&amp;gt;Game: 2: buttonEvent()
+    	Game-&amp;gt;&amp;gt;Cena: 2.1: doAction()
+    	Cena--&amp;gt;Game:
+    end
+  &lt;/div&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2015 19:12:00 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/09/diagram_state.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/09/diagram_state.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Diagrama de Sequência - Configurações</title>
+        <description>&lt;h3 id=&quot;diagrama-de-sequncia-configuraes&quot;&gt;Diagrama de Sequência Configurações&lt;/h3&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;center&gt;
+  &lt;script src=&quot;/js/mermaid.full.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt;
+  sequenceDiagram
+    Jogador-&amp;gt;&amp;gt;Configurações: Acessa Configurações()
+    Configurações--&amp;gt;Jogador: Mostra Tela()
+    Jogador-&amp;gt;&amp;gt;Configurações: Executa ação()
+    Configurações--&amp;gt;&amp;gt;Estado do Jogo: Efetua comando()
+    Estado do Jogo--&amp;gt;Configurações: Retorna alteração()
+    Configurações--&amp;gt;Jogador: Mostra Tela()
+  &lt;/div&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2015 19:11:00 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/09/diagram_state_config.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/09/diagram_state_config.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Máquina de Estado</title>
+        <description>&lt;div class=&quot;row&quot;&gt;
+    &lt;h3&gt;Durante o jogo&lt;/h3&gt;
+  &lt;div class=&quot;small-11 small-centered columns&quot;&gt;
+    &lt;script src=&quot;/js/mermaid.full.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt;
+      graph TD
+        A((1&lt;br /&gt;Iniciando partida&lt;br /&gt;e: Inicia partida)) --&amp;gt;|Inicia fase| B((2&lt;br /&gt;Iniciando fase&lt;br /&gt;e:Inicia fase))
+        B --&amp;gt;|Joga fase| C((3&lt;br /&gt;Jogando&lt;br /&gt;e: Joga fase))
+        C --&amp;gt;|Pausa| D((4&lt;br /&gt;Jogo pausado&lt;br /&gt;e: Pausa fase))
+        D --&amp;gt;|Volta ao jogo| C
+        D --&amp;gt;|Reinicia fase| B
+        C --&amp;gt;|Morre| E((5&lt;br /&gt;Morto&lt;br /&gt;e: Morre))
+        C --&amp;gt;|Conclui fase| F((6&lt;br /&gt;Fase concluída&lt;br /&gt;e: Conclui fase))
+        F --&amp;gt;|Inicia nova fase| B
+        E --&amp;gt;|Reinicia fase| B 
+        D --&amp;gt;|Termina partida| G((7&lt;br /&gt;Partida terminada&lt;br /&gt;e: Termina partida))
+        E --&amp;gt;|Termina partida| G
+        F --&amp;gt;|Termina partida| G
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2015 18:11:00 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/09/maquina_de_estado.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/09/maquina_de_estado.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Léxicos</title>
+        <description>&lt;h1 id=&quot;lxicos&quot;&gt;Léxicos&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+    &lt;br /&gt;&lt;center&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;&lt;b&gt;Termo&lt;/b&gt;&lt;/th&gt;
+                &lt;th&gt;Denotação&lt;/th&gt;
+                &lt;th&gt;Conotação&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Jogador&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Alguém que executa o programa a fim de jogar.&lt;/td&gt;
+                &lt;td&gt;Abre o jogo, seleciona fase e joga.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Inimigo&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Objeto não controlado pelo jogador.&lt;/td&gt;
+                &lt;td&gt;Atinge o jogador, reduzindo sua vida.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Denotação&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Espaçonave controlada pelo jogador.&lt;/td&gt;
+                &lt;td&gt;Movimentada pelo jogador, capaz de atirar.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Spaceship&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Objeto não controlado pelo jogador.&lt;/td&gt;
+                &lt;td&gt;Atinge o jogador, reduzindo sua vida.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Fase&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Ambiente que contém jogador e inimigos.&lt;/td&gt;
+                &lt;td&gt;Selecionada pelo jogador.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Adentrada à medida que o jogador conclui a fase anterior com sucesso.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Rohinianos&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Inimigo nascido em Rohines.&lt;/td&gt;
+                &lt;td&gt;Atinge o jogador, reduzindo sua vida.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Objeto não controlado pelo jogador.&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Ascarth&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Planeta colonizado por seres humanos.&lt;/td&gt;
+                &lt;td&gt;Planeta a ser alcançado pelo jogador.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;Abrigo seguro para humanos sendo caçados.&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Disparo&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;Tipo de munição utilizada pelo jogador.&lt;/td&gt;
+                &lt;td&gt;O jogador dispara, se atingir algum inimigo, este é destruído.&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;&lt;/center&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 05 Apr 2015 13:50:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/05/lexicos.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/lexicos.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Fluxo de Cenários</title>
+        <description>&lt;h1 id=&quot;fluxo-de-cenrios&quot;&gt;Fluxo de Cenários&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;center&gt;
+    &lt;img src=&quot;/img/fluxo.png&quot; alt=&quot;Fluxo de Cenários&quot; width=&quot;80%&quot; /&gt;
+&lt;/center&gt;
+</description>
+        <pubDate>Sun, 05 Apr 2015 05:51:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/05/fluxo.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/fluxo.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Cenários</title>
+        <description>&lt;h1 id=&quot;cenrios&quot;&gt;Cenários&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Para ver o fluxo de cenários &lt;a href=&quot;/doc/2015/04/05/fluxo.html&quot;&gt;clique aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;menu_inicial&quot;&gt;1. MENU INICIAL&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever menu inicial&lt;/li&gt;
+  &lt;li&gt;Contexto: Usuário abre o jogo&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: -&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Jogador seleciona &lt;a href=&quot;#iniciar_fase&quot;&gt;INICIAR FASE&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Jogador seleciona &lt;a href=&quot;#configuracoes&quot;&gt;CONFIGURAÇÕES&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Jogador seleciona &lt;a href=&quot;#creditos&quot;&gt;CRÉDITOS&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Jogador seleciona sair do jogo.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;iniciar_fase&quot;&gt;2. INICIAR FASE&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever preparativos para inicio do jogo&lt;/li&gt;
+  &lt;li&gt;Contexto: Menu Inicial&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: -&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Jogador seleciona a fase desejada.
+        &lt;ul&gt;
+          &lt;li&gt;Restrição 1: Jogador precisa ter concluído pelo menos a primeira
+fase.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dinamica_do_spacewars&quot;&gt;3. DINÂMICA DO SPACEWARS&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever a dinâmica do jogo&lt;/li&gt;
+  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação, tiro&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Jogador se a &lt;a href=&quot;#movimenta_spaceship&quot;&gt;MOVIMENTA SPACESHIP&lt;/a&gt; na tela.&lt;/li&gt;
+      &lt;li&gt;Jogador &lt;a href=&quot;#atira&quot;&gt;ATIRA&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Se o jogador for atingido por um Alien ou algum detrito espacial,
+então o jogador &lt;a href=&quot;#perde_o_jogo&quot;&gt;PERDE O JOGO&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Se o jogador chegar ao final da fase sem ser atingido por Aliens ou
+detritos, então o jogador &lt;a href=&quot;#avanca_de_nivel&quot;&gt;AVANÇA DE NÍVEL&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;movimenta_spaceship&quot;&gt;4. MOVIMENTA SPACESHIP&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever modo como a Spaceship se movimenta&lt;/li&gt;
+  &lt;li&gt;Contexto: Dinâmica do SpaceWars&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: Spaceship&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Se o jogador aperta a tecla direcional para cima, então a Spaceship
+se move para frente.
+        &lt;ul&gt;
+          &lt;li&gt;Restrição: Spaceship não pode ultrapassar a metade da tela.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Se o jogador aperta a tecla direcional para baixo, então a Spaceship
+se move para trás.
+        &lt;ul&gt;
+          &lt;li&gt;Restrição: O jogador não pode ultrapassar a base da tela.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Se o jogador aperta a tecla direcional para direita, então a
+Spaceship se move para direita.
+        &lt;ul&gt;
+          &lt;li&gt;Restrição: O jogador não pode ultrapassar o lado direito da tela.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Se o jogador aperta a tecla direcional para esquerda, então a
+Spaceship se move para esquerda.
+        &lt;ul&gt;
+          &lt;li&gt;Restrição: O jogador não pode ultrapassar o lado esquerdo da tela.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;atira&quot;&gt;5. ATIRA&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever comportamento do tiro&lt;/li&gt;
+  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador(Spaceship)&lt;/li&gt;
+  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação, tiro&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Se o jogador pressionou a barra de espaço, então a Spaceship lança
+um tiro no espaço.&lt;/li&gt;
+      &lt;li&gt;Se o tiro acertar um Alien, então o Alien morre.&lt;/li&gt;
+      &lt;li&gt;Se o tiro acertar um detrito, então o detrito e destruído&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;perde_o_jogo&quot;&gt;6. PERDE O JOGO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever a tela de fim de jogo&lt;/li&gt;
+  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Jogador escolhe em &lt;a href=&quot;#iniciar_fase&quot;&gt;REINICIAR FASE&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Jogador escolhe em sair do jogo.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;avanca_de_nivel&quot;&gt;7. AVANÇA DE NÍVEL&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever como o usuário ganha o jogo&lt;/li&gt;
+  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Se o jogador jogar durante o tempo da fase, sem ser atingido por
+nenhum Alien nem detritos, então o jogador avança de nível.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creditos&quot;&gt;8. CRÉDITOS&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever a tela de fim de jogo&lt;/li&gt;
+  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Jogador visualiza informação dos responsáveis pelo jogo.&lt;/li&gt;
+      &lt;li&gt;Jogador escolhe em voltar ao &lt;a href=&quot;#menu_inicial&quot;&gt;MENU INICIAL&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;configuracoes&quot;&gt;9. CONFIGURAÇÕES&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Objetivo: Descrever a tela de opções de jogo&lt;/li&gt;
+  &lt;li&gt;Contexto: Menu Inicial&lt;/li&gt;
+  &lt;li&gt;Atores: Jogador&lt;/li&gt;
+  &lt;li&gt;Recursos: -&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Episódios:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Jogador seleciona volume de som do jogo.&lt;/li&gt;
+      &lt;li&gt;Jogador seleciona volume de música do jogo.&lt;/li&gt;
+      &lt;li&gt;Jogador seleciona modo fullscreen.&lt;/li&gt;
+      &lt;li&gt;Jogador escolhe em voltar ao &lt;a href=&quot;#menu_inicial&quot;&gt;MENU INICIAL&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 05 Apr 2015 05:50:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/05/cenarios.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/cenarios.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Plano de Iteração</title>
+        <description>&lt;h1 id=&quot;plano-de-iterao&quot;&gt;Plano de Iteração&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;finalidade&quot;&gt;Finalidade&lt;/h3&gt;
+
+&lt;p&gt;Esse Plano de Iteração descreve os planos detalhados para a presente iteração, quem tem por objetivo definir e detalhar os cenários presentes no jogo, além de fornecer uma visão geral técnica da aplicação.&lt;/p&gt;
+
+&lt;h3 id=&quot;comunicao-e-gerncia&quot;&gt;Comunicação e Gerência&lt;/h3&gt;
+
+&lt;p&gt;Visando obter a melhor forma de comunicação e gerenciamento, algumas ferramentas serão utilizadas. Tais como o Telegram, para contato direto entre os membros da equipe, Waffle.io, para o gerenciamento de atividades relacionadas ao projeto (representadas por issue, no GitHub). Para o projeto, foram criados dois &lt;em&gt;boards&lt;/em&gt; no Waffle, um voltado ao &lt;a href=&quot;https://waffle.io/spacewars/spacewars&quot;&gt;desenvolvimento&lt;/a&gt; e outro à &lt;a href=&quot;https://waffle.io/spacewars/spacewars.github.io&quot;&gt;documentação&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tarefas-de-iterao&quot;&gt;Tarefas de Iteração&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;16/03:&lt;/strong&gt; Definir tema&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;17/03:&lt;/strong&gt; Elaborar Plano de Iteração&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;19/03:&lt;/strong&gt; Game Concept&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;20/03:&lt;/strong&gt; Especificar Cenários&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;25/03:&lt;/strong&gt; Game Design Document&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;27/03:&lt;/strong&gt; Configurar GitHub Pages&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;29/03:&lt;/strong&gt; Implementação do menu inicial e Glossário&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;30/03:&lt;/strong&gt; Primeira Entrega&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;02/04:&lt;/strong&gt; Atualizar plano de iteração&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;05/04:&lt;/strong&gt; Resolver pendencias da primeira entrega (Cenarios e Léxico)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;07/04:&lt;/strong&gt; Diagrama de Estado&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;09/04:&lt;/strong&gt; Documento de Arquitetura&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;12/04:&lt;/strong&gt; Diagrama de Classes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;13/04:&lt;/strong&gt; Segunda Entrega&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;14/04:&lt;/strong&gt; Atualizar plano de iteração&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;17/04:&lt;/strong&gt; Resolver pendencias da segunda entrega&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 02 Apr 2015 05:50:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/04/02/plano_iteracao.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/02/plano_iteracao.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
   </channel>
 </rss>

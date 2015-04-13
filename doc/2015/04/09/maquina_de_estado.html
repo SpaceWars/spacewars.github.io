@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Máquina de Estado | Space Wars </title>
+  <!-- <link rel="stylesheet" href="/css/sprockets-octicons.css"> -->
+  <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300|Play|Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+  <script src="/js/vendor/modernizr.js"></script>
+  <link rel="canonical" href="http://spacewars.github.io/doc/2015/04/09/maquina_de_estado.html">
+  <link rel="alternate" type="application/rss+xml" title="Space Wars" attr="http://spacewars.github.io/feed.xml">
+</head>
+
+
+    <body>
+        <header>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">SpaceWars</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="https://github.com/SpaceWars/spacewars"><img src="/img/icons/GitHub-Mark-Light-32px.png">  Código Fonte</a></li>
+        <li><a href="/documentacao/">Documentação</a></li>
+        <li><a href="/manuais/">Manuais</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>
+
+        <div class="row">
+          <div class="small-12 medium-10 large-10 small-centered columns">
+            <br>
+            <div class="row">
+    <h3>Durante o jogo</h3>
+  <div class="small-11 small-centered columns">
+    <script src="/js/mermaid.full.js"></script><div class="mermaid">
+      graph TD
+        A((1<br />Iniciando partida<br />e: Inicia partida)) --&gt;|Inicia fase| B((2<br />Iniciando fase<br />e:Inicia fase))
+        B --&gt;|Joga fase| C((3<br />Jogando<br />e: Joga fase))
+        C --&gt;|Pausa| D((4<br />Jogo pausado<br />e: Pausa fase))
+        D --&gt;|Volta ao jogo| C
+        D --&gt;|Reinicia fase| B
+        C --&gt;|Morre| E((5<br />Morto<br />e: Morre))
+        C --&gt;|Conclui fase| F((6<br />Fase concluída<br />e: Conclui fase))
+        F --&gt;|Inicia nova fase| B
+        E --&gt;|Reinicia fase| B 
+        D --&gt;|Termina partida| G((7<br />Partida terminada<br />e: Termina partida))
+        E --&gt;|Termina partida| G
+        F --&gt;|Termina partida| G
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+
+        <footer>
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.js"></script>
+  <script src="/js/foundation/foundation.topbar.js"></script>
+  <script src="/js/foundation/foundation.equalizer.js"></script>
+  <script src="/js/app.js"></script>
+</footer>
+
+    </body>
+</html>

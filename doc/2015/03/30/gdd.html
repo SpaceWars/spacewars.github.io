@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Game Design Document | Space Wars </title>
+  <!-- <link rel="stylesheet" href="/css/sprockets-octicons.css"> -->
+  <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300|Play|Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+  <script src="/js/vendor/modernizr.js"></script>
+  <link rel="canonical" href="http://spacewars.github.io/doc/2015/03/30/gdd.html">
+  <link rel="alternate" type="application/rss+xml" title="Space Wars" attr="http://spacewars.github.io/feed.xml">
+</head>
+
+
+    <body>
+        <header>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">SpaceWars</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="https://github.com/SpaceWars/spacewars"><img src="/img/icons/GitHub-Mark-Light-32px.png">  Código Fonte</a></li>
+        <li><a href="/documentacao/">Documentação</a></li>
+        <li><a href="/manuais/">Manuais</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>
+
+        <div class="row">
+          <div class="small-12 medium-10 large-10 small-centered columns">
+            <br>
+            <h1 id="game-design">Game Design</h1>
+<hr />
+
+<h3 id="mindset">Mindset</h3>
+
+<p>Um jogo agressivo, brutal, <em>oldschool</em> e tenso. Seus nervos serão tensionados ao limite para expor suas emoções com o auxilio de cometas, e naves espaciais.</p>
+
+<center>
+	<img src="https://raw.githubusercontent.com/SpaceWars/spacewars.github.io/master/img/spaceship-lego.gif" alt="Spaceship!" />
+</center>
+
+<p>O jogador será pego de surpresa em armadilhas que lhe farão gritar:</p>
+
+<blockquote>
+  <p>De onde isso apareceu? Eu nem mesmo ouvi chegando!</p>
+</blockquote>
+
+<h3 id="game-play">Game Play</h3>
+
+<p><strong>SpaceWars</strong> é um jogo no estilo <em>Shut’em up</em>, gênero que se tornou extremamente popular durante a decada de 1980, onde o jogador controla uma espaçonave e tem que destruir as ameaças alienigenas. As batalhas ocorrem em vários locais da galáxia, onde cada lugar possui características específicas.</p>
+
+<p>Os inimigos alienigenas aparecem na tela de forma aleatória, bem como os detritos espaciais. A medida que o jogador vai avançando, a quantidade de objetos (tanto alienigenas quanto detritos) aparecendo na tela aumenta, proporcionando ao jogador oportunidade de obter mais experiência e aumentando a dificuldade do jogo. Ao atingir certas quantidades de experiência, o usuário poderá liberar outras fases, com características diferentes.</p>
+
+<h3 id="controles">Controles</h3>
+
+<p>O jogo será controlado pelo teclado de acordo com o seguinte mapeamento:</p>
+
+<ul>
+  <li>← ↑ → ↓
+    <ul>
+      <li>Controle da nave e navegação em menus.</li>
+    </ul>
+  </li>
+  <li>Barra de Espaço
+    <ul>
+      <li>Atira</li>
+    </ul>
+  </li>
+  <li>Enter
+    <ul>
+      <li>Confirmação de ação nos menus.</li>
+    </ul>
+  </li>
+  <li>Esc
+    <ul>
+      <li>Retorno de telas na navegação de menus ou abertura de menu durante o jogo.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="fluxo-do-jogo">Fluxo do Jogo</h3>
+
+<p>O jogo começará no menu básico, oferecendo as opções de novo jogo, opções, créditos e sair do jogo. Ao selecionar um novo jogo, será oferecido os mapas disponíveis. Escolhido o mapa, o jogo terá inicio. Mapa após mapa o jogador vai ganhando pontos e experiencia. Durante a partida, ao pressionar <strong>ESC</strong> será apresentado o <em>Pause Menu</em>, onde será possível, dentre outras opções, sair do jogo.</p>
+
+<h3 id="telas">Telas</h3>
+
+<h5 id="menu-screen">1. Menu Screen</h5>
+
+<ul>
+  <li>New Game</li>
+  <li>Options</li>
+  <li>Credits</li>
+  <li>Quit</li>
+</ul>
+
+<h5 id="map-select">2. Map Select</h5>
+<ul>
+  <li>Disponível somente quando o jogador tiver experiência suficiente para acessar o nível 2.</li>
+</ul>
+
+<h5 id="options">3. Options</h5>
+<ul>
+  <li>SFX Volume</li>
+  <li>Music Volume</li>
+  <li>Show FPS</li>
+  <li>Fullscreen</li>
+  <li>Back</li>
+</ul>
+
+<h5 id="jogo">4. Jogo</h5>
+<ul>
+  <li>Pause Menu</li>
+</ul>
+
+<h5 id="pause-menu">5. Pause Menu</h5>
+<ul>
+  <li>Reset Level</li>
+  <li>Options</li>
+  <li>Menu</li>
+  <li>Quit Game</li>
+</ul>
+
+<h5 id="credits">6. Credits</h5>
+
+<h3 id="elementos-do-game-play">Elementos do Game Play</h3>
+
+<p>Dentre os objetos que o jogador pode interagir, há as naves inimigas e detritos do espaço como aerólitos e restos de naves.</p>
+
+<h3 id="inteligncia-artificial">Inteligência Artificial</h3>
+
+<p>A principio não há AI no <strong>SpaceWars</strong> mas sim movimentos estocasticamente definidos, assim como ações. A cada nível de dificuldade, um novo estado de movimento e ação será definido estocasticamente. Quanto maior a dificuldade do <em>gameplay</em>, mais comum será essa nova decisão de estado.</p>
+
+<h3 id="som--msica">Som &amp; Música</h3>
+
+<p><strong>SpaceWars</strong> é um jogo que se passa no espaço. Como espera ouvir música ou sons no espaço? A equipe no entanto estuda a possibilidade de adicionar música nos menus de interação com o usuário.</p>
+
+<h3 id="level-requeriment">Level Requeriment</h3>
+
+<p>Com o passar dos níveis, as fases iniciais podem ser apresentadas novamente ao jogador com o ritmo de alteração de estados de ação e movimento alterados para dar a sensação de maior dificuldade.</p>
+
+<h3 id="especificaes-tcnicas">Especificações Técnicas</h3>
+<p>O jogo será implementado inteiramente em Python (versão 2.7) e com o auxilio do framework para games Cocos2d (versão 0.6.0), que fornece algumas funcionalidades úteis para o desenvolvimento de um jogo em duas dimensões, além de contar com uma engine de física simples, mas suficiente para o propósito do jogo.</p>
+
+<p>Para a camada de persistência de dados, será utilizado o banco de dados relacional SQLite e a biblioteca SQLAlchemy, que fornece um conjunto de funcionalidades que simplifica a interação da aplicação com o banco de dados.</p>
+
+<p><br /></p>
+
+          </div>
+        </div>
+
+        <footer>
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.js"></script>
+  <script src="/js/foundation/foundation.topbar.js"></script>
+  <script src="/js/foundation/foundation.equalizer.js"></script>
+  <script src="/js/app.js"></script>
+</footer>
+
+    </body>
+</html>
