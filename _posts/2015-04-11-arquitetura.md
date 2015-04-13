@@ -21,7 +21,7 @@ Este Documento de Arquitetura se aplica ao desenvolvimento do jogo **SpaceWars**
 ## Representação da Arquitetura
 
 <center>
-    <img src="/img/arquitetura.png" alt="Diagrama de Arquitetura" width="100%" />
+    <img src="/img/arquitetura.png" alt="Diagrama de Arquitetura" width="70%" />
 </center>
 
 ## Metas e Restrições de Arquitetura
