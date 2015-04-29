@@ -6,8 +6,8 @@
 </description>
     <link>http://spacewars.github.io/</link>
     <atom:link href="http://spacewars.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2015 23:47:33 -0300</pubDate>
-    <lastBuildDate>Sun, 12 Apr 2015 23:47:33 -0300</lastBuildDate>
+    <pubDate>Wed, 29 Apr 2015 19:57:58 -0300</pubDate>
+    <lastBuildDate>Wed, 29 Apr 2015 19:57:58 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -32,7 +32,7 @@
 
 &lt;h2 id=&quot;metas-e-restries-de-arquitetura&quot;&gt;Metas e Restrições de Arquitetura&lt;/h2&gt;
 
-&lt;p&gt;O jogo deve ser jogável em sistema operacional Linux e não requisitar placa de video dedicada. Deve conseguir manter o &lt;em&gt;framerate&lt;/em&gt; mínimo de 30 fps e não requisitar mais que 1GB de RAM. A distribuissão deve ser gratuita sob licença GPL3, com direito ao código fonte.&lt;/p&gt;
+&lt;p&gt;O jogo deve ser jogável em sistemas operacionais Linux e Mac OS X e não requisitar placa de video dedicada. Deve conseguir manter o &lt;em&gt;framerate&lt;/em&gt; mínimo de 30 fps e não requisitar mais que 1GB de RAM. A distribuição deve ser gratuita sob licença GPL3, com direito ao código fonte.&lt;/p&gt;
 
 &lt;!-- # Visão de Casos de Uso
 
@@ -104,7 +104,7 @@ Para cada classe significativa no pacote, inclua o respectivo nome, uma breve de
 &lt;hr /&gt;
 
 &lt;center&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/SpaceWars/spacewars.github.io/master/img/_ucSpaceWars.png&quot; alt=&quot;Caso de Uso&quot; width=&quot;50%&quot; /&gt;
+    &lt;img src=&quot;/img/uc.png&quot; alt=&quot;Caso de Uso&quot; width=&quot;50%&quot; /&gt;
 &lt;/center&gt;
 </description>
         <pubDate>Fri, 10 Apr 2015 11:11:00 -0300</pubDate>
