@@ -26,7 +26,7 @@ Este Documento de Arquitetura se aplica ao desenvolvimento do jogo **SpaceWars**
 
 ## Metas e Restrições de Arquitetura
 
-O jogo deve ser jogável em sistema operacional Linux e não requisitar placa de video dedicada. Deve conseguir manter o *framerate* mínimo de 30 fps e não requisitar mais que 1GB de RAM. A distribuissão deve ser gratuita sob licença GPL3, com direito ao código fonte.
+O jogo deve ser jogável em sistemas operacionais Linux e Mac OS X e não requisitar placa de video dedicada. Deve conseguir manter o *framerate* mínimo de 30 fps e não requisitar mais que 1GB de RAM. A distribuição deve ser gratuita sob licença GPL3, com direito ao código fonte.
 
 <!-- # Visão de Casos de Uso
 
