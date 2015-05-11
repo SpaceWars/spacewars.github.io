@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Padrões de Projeto de Software | Space Wars </title>
+  <!-- <link rel="stylesheet" href="/css/sprockets-octicons.css"> -->
+  <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300|Play|Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+  <script src="/js/vendor/modernizr.js"></script>
+  <link rel="canonical" href="http://spacewars.github.io/doc/2015/05/10/patterns.html">
+  <link rel="alternate" type="application/rss+xml" title="Space Wars" attr="http://spacewars.github.io/feed.xml">
+</head>
+
+
+    <body>
+        <header>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">SpaceWars</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="https://github.com/SpaceWars/spacewars"><img src="/img/icons/GitHub-Mark-Light-32px.png">  Código Fonte</a></li>
+        <li><a href="/documentacao/">Documentação</a></li>
+        <li><a href="/manuais/">Manuais</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>
+
+        <div class="row">
+          <div class="small-12 medium-10 large-10 small-centered columns">
+            <br>
+            <h1 id="patterns">Patterns</h1>
+<hr />
+
+<h2 id="polimorfismo">Polimorfismo</h2>
+
+<p>Devido a característica de um jogo ser basicamente orientado a eventos, as <em>Layers</em> tenderão a possuir sobrescritas de métodos, devido a ser nessa classe onde as funções responsáveis por eventos estarem originalmente definidas.</p>
+
+<pre><code>def on_key_release(self, keys, mod):
+    print 'Centering spaceship'
+    self.spaceship.center_spaceship()
+</code></pre>
+
+<p>Características das funções de evento, na biblioteca <strong>cocos</strong> os métodos responsáveis por eventos começam com a <em>string</em> “<em>on_</em>”.</p>
+
+<pre><code>def on_text_motion(self, keys):
+    if keys == key.MOTION_LEFT:
+        print 'Move Spaceship to left'
+        self.spaceship.move_left()
+    elif keys == key.MOTION_RIGHT:
+        print 'Move Spaceship to rigth'
+        self.spaceship.move_rigth()
+</code></pre>
+
+<p>Alguns modelos já implementados encontram-se na cena principal do jogo, onde é rastreada o pressionamento das teclas para movimentação da espaçonave e a liberação das mesmas.</p>
+
+<h2 id="object-pool">Object Pool</h2>
+
+<p>Outro padrão bastante comum em jogos é a presença de uma <em>pool</em> de objetos. Este padrão é normalmente utilizando quando há uma alta demanda de objetos e há a possibilidade de reuso de um objeto. Assim é criado uma <em>pool</em> - normalmente uma lista -  onde todos os objetos são instanciados de uma vez, para serem usados sob demanda no decorrer da aplicação.</p>
+
+<pre><code>class GameScene(Layer):
+    is_event_handler = True
+
+    def __init__(self):
+        super(GameScene, self).__init__()
+        self.background = BackgroundLayer('backgrounds/bluespace.png')
+        self.spaceship = SpaceShipSprite()
+        self.aerolites = []
+        self.rohenians = []
+        for x in xrange(50, WIDTH, 100):
+            self.aerolites.append(AeroliteSprite(width=x))
+            self.rohenians.append(RohenianSprite())
+</code></pre>
+
+          </div>
+        </div>
+
+        <footer>
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.js"></script>
+  <script src="/js/foundation/foundation.topbar.js"></script>
+  <script src="/js/foundation/foundation.equalizer.js"></script>
+  <script src="/js/app.js"></script>
+</footer>
+
+    </body>
+</html>

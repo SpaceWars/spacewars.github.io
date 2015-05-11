@@ -6,9 +6,81 @@
 </description>
     <link>http://spacewars.github.io/</link>
     <atom:link href="http://spacewars.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Apr 2015 19:57:58 -0300</pubDate>
-    <lastBuildDate>Wed, 29 Apr 2015 19:57:58 -0300</lastBuildDate>
+    <pubDate>Mon, 11 May 2015 02:02:44 -0300</pubDate>
+    <lastBuildDate>Mon, 11 May 2015 02:02:44 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Padrões de Projeto de Software</title>
+        <description>&lt;h1 id=&quot;patterns&quot;&gt;Patterns&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;polimorfismo&quot;&gt;Polimorfismo&lt;/h2&gt;
+
+&lt;p&gt;Devido a característica de um jogo ser basicamente orientado a eventos, as &lt;em&gt;Layers&lt;/em&gt; tenderão a possuir sobrescritas de métodos, devido a ser nessa classe onde as funções responsáveis por eventos estarem originalmente definidas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def on_key_release(self, keys, mod):
+    print &#39;Centering spaceship&#39;
+    self.spaceship.center_spaceship()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Características das funções de evento, na biblioteca &lt;strong&gt;cocos&lt;/strong&gt; os métodos responsáveis por eventos começam com a &lt;em&gt;string&lt;/em&gt; “&lt;em&gt;on_&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def on_text_motion(self, keys):
+    if keys == key.MOTION_LEFT:
+        print &#39;Move Spaceship to left&#39;
+        self.spaceship.move_left()
+    elif keys == key.MOTION_RIGHT:
+        print &#39;Move Spaceship to rigth&#39;
+        self.spaceship.move_rigth()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Alguns modelos já implementados encontram-se na cena principal do jogo, onde é rastreada o pressionamento das teclas para movimentação da espaçonave e a liberação das mesmas.&lt;/p&gt;
+
+&lt;h2 id=&quot;object-pool&quot;&gt;Object Pool&lt;/h2&gt;
+
+&lt;p&gt;Outro padrão bastante comum em jogos é a presença de uma &lt;em&gt;pool&lt;/em&gt; de objetos. Este padrão é normalmente utilizando quando há uma alta demanda de objetos e há a possibilidade de reuso de um objeto. Assim é criado uma &lt;em&gt;pool&lt;/em&gt; - normalmente uma lista -  onde todos os objetos são instanciados de uma vez, para serem usados sob demanda no decorrer da aplicação.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class GameScene(Layer):
+    is_event_handler = True
+
+    def __init__(self):
+        super(GameScene, self).__init__()
+        self.background = BackgroundLayer(&#39;backgrounds/bluespace.png&#39;)
+        self.spaceship = SpaceShipSprite()
+        self.aerolites = []
+        self.rohenians = []
+        for x in xrange(50, WIDTH, 100):
+            self.aerolites.append(AeroliteSprite(width=x))
+            self.rohenians.append(RohenianSprite())
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sun, 10 May 2015 18:50:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/05/10/patterns.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/05/10/patterns.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Diagrama de classes</title>
+        <description>&lt;p align=&quot;center&quot;&gt;
+  Clique na imagem para melhor visualização.
+  &lt;a href=&quot;/img/class_diagram.png&quot;&gt;
+    &lt;img src=&quot;/img/class_diagram.png&quot; alt=&quot;Diagrama de classes&quot; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 May 2015 18:50:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/05/10/class_diagram.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/05/10/class_diagram.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
     
       <item>
         <title>Documento de Arquitetura</title>
@@ -319,290 +391,6 @@ Para cada classe significativa no pacote, inclua o respectivo nome, uma breve de
         <pubDate>Sun, 05 Apr 2015 05:51:03 -0300</pubDate>
         <link>http://spacewars.github.io/doc/2015/04/05/fluxo.html</link>
         <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/fluxo.html</guid>
-        
-        
-        <category>doc</category>
-        
-      </item>
-    
-      <item>
-        <title>Cenários</title>
-        <description>&lt;h1 id=&quot;cenrios&quot;&gt;Cenários&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;Para ver o fluxo de cenários &lt;a href=&quot;/doc/2015/04/05/fluxo.html&quot;&gt;clique aqui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;menu_inicial&quot;&gt;1. MENU INICIAL&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever menu inicial&lt;/li&gt;
-  &lt;li&gt;Contexto: Usuário abre o jogo&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: -&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Jogador seleciona &lt;a href=&quot;#iniciar_fase&quot;&gt;INICIAR FASE&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Jogador seleciona &lt;a href=&quot;#configuracoes&quot;&gt;CONFIGURAÇÕES&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Jogador seleciona &lt;a href=&quot;#creditos&quot;&gt;CRÉDITOS&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Jogador seleciona sair do jogo.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;iniciar_fase&quot;&gt;2. INICIAR FASE&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever preparativos para inicio do jogo&lt;/li&gt;
-  &lt;li&gt;Contexto: Menu Inicial&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: -&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Jogador seleciona a fase desejada.
-        &lt;ul&gt;
-          &lt;li&gt;Restrição 1: Jogador precisa ter concluído pelo menos a primeira
-fase.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;dinamica_do_spacewars&quot;&gt;3. DINÂMICA DO SPACEWARS&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever a dinâmica do jogo&lt;/li&gt;
-  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação, tiro&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Jogador se a &lt;a href=&quot;#movimenta_spaceship&quot;&gt;MOVIMENTA SPACESHIP&lt;/a&gt; na tela.&lt;/li&gt;
-      &lt;li&gt;Jogador &lt;a href=&quot;#atira&quot;&gt;ATIRA&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Se o jogador for atingido por um Alien ou algum detrito espacial,
-então o jogador &lt;a href=&quot;#perde_o_jogo&quot;&gt;PERDE O JOGO&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Se o jogador chegar ao final da fase sem ser atingido por Aliens ou
-detritos, então o jogador &lt;a href=&quot;#avanca_de_nivel&quot;&gt;AVANÇA DE NÍVEL&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;movimenta_spaceship&quot;&gt;4. MOVIMENTA SPACESHIP&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever modo como a Spaceship se movimenta&lt;/li&gt;
-  &lt;li&gt;Contexto: Dinâmica do SpaceWars&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: Spaceship&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Se o jogador aperta a tecla direcional para cima, então a Spaceship
-se move para frente.
-        &lt;ul&gt;
-          &lt;li&gt;Restrição: Spaceship não pode ultrapassar a metade da tela.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Se o jogador aperta a tecla direcional para baixo, então a Spaceship
-se move para trás.
-        &lt;ul&gt;
-          &lt;li&gt;Restrição: O jogador não pode ultrapassar a base da tela.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Se o jogador aperta a tecla direcional para direita, então a
-Spaceship se move para direita.
-        &lt;ul&gt;
-          &lt;li&gt;Restrição: O jogador não pode ultrapassar o lado direito da tela.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Se o jogador aperta a tecla direcional para esquerda, então a
-Spaceship se move para esquerda.
-        &lt;ul&gt;
-          &lt;li&gt;Restrição: O jogador não pode ultrapassar o lado esquerdo da tela.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;atira&quot;&gt;5. ATIRA&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever comportamento do tiro&lt;/li&gt;
-  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador(Spaceship)&lt;/li&gt;
-  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação, tiro&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Se o jogador pressionou a barra de espaço, então a Spaceship lança
-um tiro no espaço.&lt;/li&gt;
-      &lt;li&gt;Se o tiro acertar um Alien, então o Alien morre.&lt;/li&gt;
-      &lt;li&gt;Se o tiro acertar um detrito, então o detrito e destruído&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;perde_o_jogo&quot;&gt;6. PERDE O JOGO&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever a tela de fim de jogo&lt;/li&gt;
-  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Jogador escolhe em &lt;a href=&quot;#iniciar_fase&quot;&gt;REINICIAR FASE&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Jogador escolhe em sair do jogo.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;avanca_de_nivel&quot;&gt;7. AVANÇA DE NÍVEL&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever como o usuário ganha o jogo&lt;/li&gt;
-  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Se o jogador jogar durante o tempo da fase, sem ser atingido por
-nenhum Alien nem detritos, então o jogador avança de nível.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;creditos&quot;&gt;8. CRÉDITOS&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever a tela de fim de jogo&lt;/li&gt;
-  &lt;li&gt;Contexto: Iniciar Fase&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: Spaceship, Aliens, detritos espaciais, Pontuação&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Jogador visualiza informação dos responsáveis pelo jogo.&lt;/li&gt;
-      &lt;li&gt;Jogador escolhe em voltar ao &lt;a href=&quot;#menu_inicial&quot;&gt;MENU INICIAL&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;configuracoes&quot;&gt;9. CONFIGURAÇÕES&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Objetivo: Descrever a tela de opções de jogo&lt;/li&gt;
-  &lt;li&gt;Contexto: Menu Inicial&lt;/li&gt;
-  &lt;li&gt;Atores: Jogador&lt;/li&gt;
-  &lt;li&gt;Recursos: -&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Episódios:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Jogador seleciona volume de som do jogo.&lt;/li&gt;
-      &lt;li&gt;Jogador seleciona volume de música do jogo.&lt;/li&gt;
-      &lt;li&gt;Jogador seleciona modo fullscreen.&lt;/li&gt;
-      &lt;li&gt;Jogador escolhe em voltar ao &lt;a href=&quot;#menu_inicial&quot;&gt;MENU INICIAL&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 05 Apr 2015 05:50:03 -0300</pubDate>
-        <link>http://spacewars.github.io/doc/2015/04/05/cenarios.html</link>
-        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/cenarios.html</guid>
-        
-        
-        <category>doc</category>
-        
-      </item>
-    
-      <item>
-        <title>Plano de Iteração</title>
-        <description>&lt;h1 id=&quot;plano-de-iterao&quot;&gt;Plano de Iteração&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;finalidade&quot;&gt;Finalidade&lt;/h3&gt;
-
-&lt;p&gt;Esse Plano de Iteração descreve os planos detalhados para a presente iteração, quem tem por objetivo definir e detalhar os cenários presentes no jogo, além de fornecer uma visão geral técnica da aplicação.&lt;/p&gt;
-
-&lt;h3 id=&quot;comunicao-e-gerncia&quot;&gt;Comunicação e Gerência&lt;/h3&gt;
-
-&lt;p&gt;Visando obter a melhor forma de comunicação e gerenciamento, algumas ferramentas serão utilizadas. Tais como o Telegram, para contato direto entre os membros da equipe, Waffle.io, para o gerenciamento de atividades relacionadas ao projeto (representadas por issue, no GitHub). Para o projeto, foram criados dois &lt;em&gt;boards&lt;/em&gt; no Waffle, um voltado ao &lt;a href=&quot;https://waffle.io/spacewars/spacewars&quot;&gt;desenvolvimento&lt;/a&gt; e outro à &lt;a href=&quot;https://waffle.io/spacewars/spacewars.github.io&quot;&gt;documentação&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tarefas-de-iterao&quot;&gt;Tarefas de Iteração&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;16/03:&lt;/strong&gt; Definir tema&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;17/03:&lt;/strong&gt; Elaborar Plano de Iteração&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;19/03:&lt;/strong&gt; Game Concept&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;20/03:&lt;/strong&gt; Especificar Cenários&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;25/03:&lt;/strong&gt; Game Design Document&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;27/03:&lt;/strong&gt; Configurar GitHub Pages&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;29/03:&lt;/strong&gt; Implementação do menu inicial e Glossário&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;30/03:&lt;/strong&gt; Primeira Entrega&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;02/04:&lt;/strong&gt; Atualizar plano de iteração&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;05/04:&lt;/strong&gt; Resolver pendencias da primeira entrega (Cenarios e Léxico)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;07/04:&lt;/strong&gt; Diagrama de Estado&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;09/04:&lt;/strong&gt; Documento de Arquitetura&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;12/04:&lt;/strong&gt; Diagrama de Classes&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;13/04:&lt;/strong&gt; Segunda Entrega&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;14/04:&lt;/strong&gt; Atualizar plano de iteração&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;17/04:&lt;/strong&gt; Resolver pendencias da segunda entrega&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 02 Apr 2015 05:50:03 -0300</pubDate>
-        <link>http://spacewars.github.io/doc/2015/04/02/plano_iteracao.html</link>
-        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/02/plano_iteracao.html</guid>
         
         
         <category>doc</category>
