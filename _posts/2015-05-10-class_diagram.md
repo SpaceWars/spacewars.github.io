@@ -6,10 +6,9 @@ category: doc
 description: Diagrama de classes do jogo
 ---
 
-<div class="row">
-  <div class="small-11 small-centered columns">
-    {% mermaid %}
-      graph TD
-    {% endmermaid %}
-  </div>
-</div>
+<p align="center">
+  Clique na imagem para melhor visualização.
+  <a href="/img/class_diagram.png">
+    <img src="/img/class_diagram.png" alt="Diagrama de classes" />
+  </a>
+</p>
