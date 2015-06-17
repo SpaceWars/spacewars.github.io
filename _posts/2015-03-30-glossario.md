@@ -7,6 +7,36 @@ category: manual
 
 # Glossário
 
+<br>
+
+>## Lore
+
+<h3 id="rohines"> Rohines </h3>
+
+Planeta natal dos Rohiniano, localizado em uma galaxia alguns anos luz da Terra. . Neste planeta não há nenhuma especie voadora, o que, de alguma forma, gerou  uma cadeia de acontecimentos e evoluções que produziram serem incapazes de vizualisar espectro de cores amarelas.
+
+<h3 id="rohiniano"> Rohiniano </h3>
+
+Seres do planeta Rohines. Estes seres, alem de não conseguirem visualizar o espectro de cor amarelo, também  necessitam estar em gerra sempre para que consigam se reproduzir sem que seus ovos eclodam antes da hora. Depois de 100 anos de guerra contra a ultima especie viva em seu planeta além deles proprios, os *antdades* (animais semelhantes aos da familia Formicidae de nosso planeta), os Rohines viram a necessidade de dominar a tecnologia de naves espaciais, para dizimar todas as demais raças que pudessem haver no universo. Eventualmente encontraram com alguns humanos.
+
+
+<h3 id="ascarth"> Ascarth </h3>
+
+Também conhecido com *Terra 51*, este planeta foi o 665º planeta colonizado pela raça humana em seu apice de existência. Atualmente é considerado um planeta seguro e com alto poder bélico.
+
+
+<h3 id="aerolitos"> Aerólitos </h3>
+
+Também conhecidos com meteoritos rochosos ou meteoritos pétreos, são detritos espalhados pelo cosmo e que fatalmente o jogador se chocará contra um. Normalmente possuem uma aparência acinzentada devido a uma elevada percentagem de minerais silicatados.
+
+<h3 id="spaceship"> Spaceship </h3>
+
+Também conhecidas como naves espaciais, caracteriza veículos utilizados para viagens espaciais. Em um tempo distante e já esquecido do passado, naves espaciais eram comumente utilizadas para exploração, todavia a guerra fez a necessidade da construção de veículos de destruição em massa utilizados na guerra silenciosa e mortal que se espalha pelo cosmos.
+
+<br><br><br>
+
+>## Técnicos
+
 <h3 id="python"> Python </h3>
 
 Linguagem utilizada para desenvolver o jogo. É uma linguagem alto nível, interpretada, de tipagem dinâmica e forte e multi-paradigma. Prioriza a legibilidade do código sobre a velocidade ou expressividade e enfatiza a importância do esforço do programador sobre o esforço computacional.
@@ -19,14 +49,6 @@ Linguagem utilizada para desenvolver o jogo. É uma linguagem alto nível, inter
 <h3 id="cocos2d"> Cocos2D </h3>
 
 É um *framework* voltado para jogos ou aplicações gráficas 2D. O *framework* faz de uso de chamadas OpenGL além de chamadas com o auxilio do *pyglet*. Sua documentação pode ser encontrada no [Pydoc oficial](http://pydoc.net/Python/cocos2d/).
-
-<h3 id="aerolitos"> Aerólitos </h3>
-
-Também conhecidos com meteoritos rochosos ou meteoritos pétreos, são detritos espalhados pelo cosmo e que fatalmente o jogador se chocará contra um. Normalmente possuem uma aparência acinzentada devido a uma elevada percentagem de minerais silicatados.
-
-<h3 id="spaceship"> Spaceship </h3>
-
-Também conhecidas como naves espaciais, caracteriza veículos utilizados para viagens espaciais. Em um tempo distante e já esquecido do passado, naves espaciais eram comumente utilizadas para exploração, todavia a guerra fez a necessidade da construção de veículos de destruição em massa utilizados na guerra silenciosa e mortal que se espalha pelo cosmos.
 
 <h3 id="joypad"> Joypad </h3>
 
@@ -55,4 +77,3 @@ Uma coleção de subprogramas utilizados no desenvolvimento de software. Bibliot
 <h3 id="biblioteca"> Oldschool</h3>
 
 Na gíria, "old school" ou "Old Skool" pode se referir a qualquer coisa que seja de uma época anterior ou qualquer coisa que possa ser considerado "antiquado". O termo é comumente usado para sugerir um grande respeito por algo que tem sido demonstrado que têm valor ou qualidade duradoura. "
-
