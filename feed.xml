@@ -6,8 +6,8 @@
 </description>
     <link>http://spacewars.github.io/</link>
     <atom:link href="http://spacewars.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 May 2015 02:02:44 -0300</pubDate>
-    <lastBuildDate>Mon, 11 May 2015 02:02:44 -0300</lastBuildDate>
+    <pubDate>Wed, 17 Jun 2015 14:21:38 -0300</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2015 14:21:38 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,45 +15,196 @@
         <description>&lt;h1 id=&quot;patterns&quot;&gt;Patterns&lt;/h1&gt;
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;polimorfismo&quot;&gt;Polimorfismo&lt;/h2&gt;
+&lt;h2 id=&quot;criador&quot;&gt;Criador&lt;/h2&gt;
 
-&lt;p&gt;Devido a característica de um jogo ser basicamente orientado a eventos, as &lt;em&gt;Layers&lt;/em&gt; tenderão a possuir sobrescritas de métodos, devido a ser nessa classe onde as funções responsáveis por eventos estarem originalmente definidas.&lt;/p&gt;
+&lt;p&gt;O framework utilizado possui a seguinte estrutura, onde o director é responsável
+por rodar as cenas (scenes), que são responsáveis por criar camadas (layers), que, por
+sua vez, cria e gerencia sprites.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def on_key_release(self, keys, mod):
-    print &#39;Centering spaceship&#39;
-    self.spaceship.center_spaceship()
+&lt;center&gt;
+  &lt;script src=&quot;/js/mermaid.full.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt;
+  sequenceDiagram
+    director-&amp;gt;&amp;gt;Scene: run()
+    Scene-&amp;gt;&amp;gt;Layer: create()
+    Layer-&amp;gt;&amp;gt;Sprite: create()
+  &lt;/div&gt;
+&lt;/center&gt;
+
+&lt;h2 id=&quot;controladora&quot;&gt;Controladora&lt;/h2&gt;
+
+&lt;p&gt;Basicamente, as Layers (camadas) gerenciam os enventos realizados pelo usuário, como apertar uma tecla
+específica, e define uma resposta à essa ação do usuário, sendo que essa resposta pode envolver outras
+partes da arquitetura.&lt;/p&gt;
+
+&lt;!-- 
+## Object Pool
+
+Outro padrão bastante comum em jogos é a presença de uma *pool* de objetos. Este padrão é normalmente utilizando quando há uma alta demanda de objetos e há a possibilidade de reuso de um objeto. Assim é criado uma *pool* - normalmente uma lista -  onde todos os objetos são instanciados de uma vez, para serem usados sob demanda no decorrer da aplicação.
+
+    class GameScene(Layer):
+        is_event_handler = True
+
+        def __init__(self):
+            super(GameScene, self).__init__()
+            self.background = BackgroundLayer(&#39;backgrounds/bluespace.png&#39;)
+            self.spaceship = SpaceShipSprite()
+            self.aerolites = []
+            self.rohenians = []
+            for x in xrange(50, WIDTH, 100):
+                self.aerolites.append(AeroliteSprite(width=x))
+                self.rohenians.append(RohenianSprite()) --&gt;
+
+&lt;h2 id=&quot;event-based-asynchronous&quot;&gt;Event-based asynchronous&lt;/h2&gt;
+
+&lt;p&gt;Padrões voltados para ocorrências em assíncrono, a fim de sanar a necessidade de receber inputs não esperados pelo usuario ou estados inesperados da aplicação:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import signal
+
+def signal_handler(signal_received, frame):
+    if signal_received is signal.SIGINT:
+        # erase the ^C on Terminal
+        print &quot;\r  &quot;
+        exit(0)
+
+if __name__ == &quot;__main__&quot;:
+    resource.path.append(&#39;data&#39;)
+    resource.reindex()
+    font.add_directory(&#39;data/fonts&#39;)
+
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGSEGV, signal_handler)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Características das funções de evento, na biblioteca &lt;strong&gt;cocos&lt;/strong&gt; os métodos responsáveis por eventos começam com a &lt;em&gt;string&lt;/em&gt; “&lt;em&gt;on_&lt;/em&gt;”.&lt;/p&gt;
+&lt;!-- ## Command [Design Pattner Revised]
 
-&lt;pre&gt;&lt;code&gt;def on_text_motion(self, keys):
-    if keys == key.MOTION_LEFT:
-        print &#39;Move Spaceship to left&#39;
-        self.spaceship.move_left()
-    elif keys == key.MOTION_RIGHT:
-        print &#39;Move Spaceship to rigth&#39;
-        self.spaceship.move_rigth()
+Algumas entradas que o sistema recebe
+
+class SpaceshipAction(actions.Move):
+
+    # step() is called every frame.
+    # dt is the number of seconds elapsed since the last call.
+
+    def step(self, dt):
+        max_left = self.target.image.width * self.target.scale / 2
+        max_right = WIDTH - self.target.image.width * self.target.scale / 2
+
+        # Run step function on the parent class.
+        super(SpaceshipAction, self).step(dt)
+
+        # Determine velocity based on keyboard inputs.
+        keyboard = EventHandle().keyboard
+        velocity_x = 0
+        velocity_y = 0
+        velocity_x = 200 * (keyboard[key.RIGHT] - keyboard[key.LEFT])
+
+        if self.target.position[0] &lt; max_left:
+            self.target.position = (max_left, 100)
+
+        if self.target.position[0] &gt; max_right:
+            self.target.position = (max_right, 100)
+
+        # Set the object&#39;s velocity.
+        self.target.velocity = (velocity_x, velocity_y)
+        if keyboard[key.LEFT]:
+            self.target.move_left()
+        elif keyboard[key.RIGHT]:
+            self.target.move_right()
+        else:
+            self.target.center_spaceship() --&gt;
+
+&lt;h2 id=&quot;singleton&quot;&gt;Singleton&lt;/h2&gt;
+
+&lt;p&gt;Uma dificuldade que o time teve, foi a de conseguir um objeto &lt;em&gt;keyboard&lt;/em&gt; que conseguisse manter os estados das teclas. A biblioteca &lt;em&gt;pyglet&lt;/em&gt; fornecia uma solução, mas apenas a primeira instância de cada aplicação recebia as atualizações. A solução proposta então foi a de implementar esta instancia como &lt;em&gt;singleton&lt;/em&gt;, a fim de garantir que sempre que a primeira instancia pudesse ler lida a qualquer momento da aplicação.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/img/singleton.png&quot; alt=&quot;Singleton&quot; /&gt;&lt;/center&gt;
+
+&lt;h3 id=&quot;keyboard-event&quot;&gt;Keyboard-event&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;class EventHandle(object):
+
+&quot;&quot;&quot;docstring for EventHandle&quot;&quot;&quot;
+
+keyboard = None
+
+def __new__(cls):
+    if not hasattr(cls, &#39;instance&#39;):
+        cls.instance = super(EventHandle, cls).__new__(cls)
+    return cls.instance
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Alguns modelos já implementados encontram-se na cena principal do jogo, onde é rastreada o pressionamento das teclas para movimentação da espaçonave e a liberação das mesmas.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
 
-&lt;h2 id=&quot;object-pool&quot;&gt;Object Pool&lt;/h2&gt;
-
-&lt;p&gt;Outro padrão bastante comum em jogos é a presença de uma &lt;em&gt;pool&lt;/em&gt; de objetos. Este padrão é normalmente utilizando quando há uma alta demanda de objetos e há a possibilidade de reuso de um objeto. Assim é criado uma &lt;em&gt;pool&lt;/em&gt; - normalmente uma lista -  onde todos os objetos são instanciados de uma vez, para serem usados sob demanda no decorrer da aplicação.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;class GameScene(Layer):
-    is_event_handler = True
-
-    def __init__(self):
-        super(GameScene, self).__init__()
-        self.background = BackgroundLayer(&#39;backgrounds/bluespace.png&#39;)
-        self.spaceship = SpaceShipSprite()
-        self.aerolites = []
-        self.rohenians = []
-        for x in xrange(50, WIDTH, 100):
-            self.aerolites.append(AeroliteSprite(width=x))
-            self.rohenians.append(RohenianSprite())
+&lt;pre&gt;&lt;code&gt;keyboard = key.KeyStateHandler()
+director.window.push_handlers(keyboard)
+EventHandle().keyboard = keyboard
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;combo-factory-singleton-pool&quot;&gt;Combo: Factory-Singleton-Pool&lt;/h2&gt;
+
+&lt;p&gt;A evolução anterior do Pool de objetos se fez a necessidade de ter um objeto que mantivesse o controle de produções e fornecimento dos objetos da pool, assim como  destrui-los corretamente,caso necessário. Desta forma, foi implementada uma &lt;em&gt;Factory&lt;/em&gt; responsavel pelo fornecimento dos objetos. Como a Factory poderia ser acionada de varias cenas do jogo, ela foi transformada em um  &lt;em&gt;singleton&lt;/em&gt; para garantir esta acessibilidade, evitando o desperdicio de recursos ao se criar objetos.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/img/fire-factory.png&quot; alt=&quot;FireFactory&quot; /&gt;&lt;/center&gt;
+
+&lt;h3 id=&quot;firefactory&quot;&gt;FireFactory&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;class FireFactory(object):
+
+    &quot;&quot;&quot;docstring for FireFactory&quot;&quot;&quot;
+
+    ammo = {&#39;hero&#39;: [], &#39;enemies&#39;: []}
+
+    def __new__(cls):
+        if not hasattr(cls, &#39;instance&#39;):
+            cls.instance = super(FireFactory, cls).__new__(cls)
+        return cls.instance
+
+    @classmethod
+    def create_bullets(cls, bullet_type, qnt=50):
+        if bullet_type in hero:
+            for x in xrange(0, qnt):
+                cls.ammo[&#39;hero&#39;].append(SpaceShipBullet())
+        elif bullet_type in rohenian:
+            for x in xrange(0, qnt):
+                cls.ammo[&#39;enemies&#39;].append(RoheniansBullet())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;combo-factory-singleton-pool-dirty-flag&quot;&gt;Combo: Factory-Singleton-Pool-Dirty Flag&lt;/h2&gt;
+
+&lt;p&gt;Uma das &lt;em&gt;Factories&lt;/em&gt; presentes no código apresentou a requisição de se saber se ela se encontrava ou não vazia. Desta forma, uma flag foi acrescentada nela para manter esta informação. Como esta informação pode ser obtida de forma assincrona, acabou se apresentando o padrão &lt;em&gt;Dirty Flag&lt;/em&gt; no contexto.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/img/enemy-factory.png&quot; alt=&quot;EnemyFactory&quot; /&gt;&lt;/center&gt;
+
+&lt;h3 id=&quot;enemyfactory&quot;&gt;EnemyFactory&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;class EnemyFactory(object):
+
+    &quot;&quot;&quot;docstring for EnemyFactory&quot;&quot;&quot;
+    enemy_list = {&quot;Rohenian&quot;: [], &quot;Aerolite&quot;: []}
+
+    def __new__(cls):
+        if not hasattr(cls, &#39;instance&#39;):
+            cls.instance = super(EnemyFactory, cls).__new__(cls)
+        cls.empty = True
+        return cls.instance
+
+    @classmethod
+    def populate_enemy(cls, enemy_type, qnt=1):
+
+        if enemy_type in rohenian:
+            for x in xrange(0, qnt):
+                cls.enemy_list[&quot;Rohenian&quot;].append(
+                    Rohenian())
+            cls.empty = False
+            return
+        if enemy_type in aerolite:
+            for x in xrange(0, qnt):
+                cls.enemy_list[&quot;Aerolite&quot;].append(
+                    Aerolite())
+            cls.empty = False
+            return
+        assert 0, &quot;Bad enemy creation: &quot; + enemy_type
+&lt;/code&gt;&lt;/pre&gt;
+
 </description>
         <pubDate>Sun, 10 May 2015 18:50:03 -0300</pubDate>
         <link>http://spacewars.github.io/doc/2015/05/10/patterns.html</link>
@@ -68,6 +219,13 @@
         <title>Diagrama de classes</title>
         <description>&lt;p align=&quot;center&quot;&gt;
   Clique na imagem para melhor visualização.
+  &lt;br /&gt;
+  Versão curta:
+  &lt;a href=&quot;/img/class_diagram_short.png&quot;&gt;
+    &lt;img src=&quot;/img/class_diagram_short.png&quot; width=&quot;120%&quot; alt=&quot;Diagrama de classes&quot; /&gt;
+  &lt;/a&gt;
+
+  Versão completa:
   &lt;a href=&quot;/img/class_diagram.png&quot;&gt;
     &lt;img src=&quot;/img/class_diagram.png&quot; alt=&quot;Diagrama de classes&quot; /&gt;
   &lt;/a&gt;
