@@ -47,6 +47,7 @@ O jogo deverá tratar os possíveis erros para que não pareça uma falha muito 
 
 - O jogo deverá ser *Open Source*, no intuito de permitir contribuição da comunidade.
 - O jogo terá suporte à plataformas Linux e OS X.
+- Será necessário o Kernel 3.17, para que o joystick do Xbox One seja identificado.
 
 ## Sistema de Ajuda e Documentação de Usuário
 
