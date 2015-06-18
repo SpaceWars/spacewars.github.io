@@ -52,3 +52,34 @@ Visando obter a melhor forma de comunicação e gerenciamento, algumas ferrament
 >**14/04:** Atualizar plano de iteração
 
 >**17/04:** Resolver pendencias da segunda entrega
+
+<br><br>
+
+### Custos
+
+>####	SLOC	Directory	SLOC-by-Language (Sorted)
+	794     SpaceWars       python=687,sh=107
+	789     IO              xml=520,sh=263,ruby=6
+
+
+>####	Totals grouped by language (dominant language first):
+	python:         687 (43.40%)
+	xml:            520 (32.85%)
+	sh:             370 (23.37%)
+	ruby:             6 (0.38%)
+
+
+Total Physical Source Lines of Code (SLOC)                = 1,583<br>
+Development Effort Estimate, Person-Years (Person-Months) = 0.32 (3.89)<br>
+ (Basic COCOMO model, Person-Months = 2.4 \* (KSLOC\*\*1.05))<br>
+Schedule Estimate, Years (Months)                         = 0.35 (4.19)<br>
+ (Basic COCOMO model, Months = 2.5 \* (person-months\*\*0.38))<br>
+Estimated Average Number of Developers (Effort/Schedule)  = 0.93<br>
+Total Estimated Cost to Develop                           = $ 43,762<br>
+ (average salary = $56,286/year, overhead = 2.40).<br>
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler<br>
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.<br>
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to<br>
+redistribute it under certain conditions as specified by the GNU GPL license;<br>
+see the documentation for details.<br><br>
+**Generated using David A. Wheeler's 'SLOCCount'.** <br>
