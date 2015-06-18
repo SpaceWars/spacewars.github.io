@@ -31,11 +31,12 @@ Os inimigos alienigenas aparecem na tela de forma aleatória, bem como os detrit
 
 ## Usabilidade
 
-**SpaceWars** é um jogo no estilo *Shut'em up*. O jogo será controlado pelo tecladoou joystick.
+* **SpaceWars** é um jogo no estilo *Shut'em up*, onde o jogador controla uma espaçonave e deve destruir todos os inimigos, tanto os Rohinianos quanto os aerolitos.
+* O jogo será controlado pelo teclado ou joystick de Xbox One.
 
 ## Confiabilidade
 
-O jogo não deverá quebrar enquanto estiver sendo usado pelo usuário.
+O jogo deverá tratar os possíveis erros para que não pareça uma falha muito grande para o usuário.
 
 ## Performance
 
@@ -45,6 +46,26 @@ O jogo não deverá quebrar enquanto estiver sendo usado pelo usuário.
 ## Suportabilidade
 
 - O jogo deverá ser *Open Source*, no intuito de permitir contribuição da comunidade.
+- O jogo terá suporte à plataformas Linux e OS X.
+
+## Sistema de Ajuda e Documentação de Usuário
+
+- O jogo deverá possuir um manual do usuário, com informações de instalação e configuração de ambiente, bem como instruções de como jogar.
+
+## Interface
+
+### Interface de Usuário
+
+- Pelo fato da equipe não possuir nenhum designer, toda a interface de usuário deve possuir imagens com autorização prévia de utilização (Creative Commons).
+
+### Interface de Software
+
+- O jogo não necessita de interagir com nenhum outro software.
+
+### Interface de Hardware
+
+- Deverá ser possível utilizar um joystick para melhorar a jogabilidade.
+- Para facilitar a integração, o sistema deverá oferecer suporte ao joystick de Xbox One.
 
 ## Restrições de Design
 
