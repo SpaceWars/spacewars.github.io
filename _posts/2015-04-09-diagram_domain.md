@@ -9,5 +9,5 @@ description: Diagrama de Modelo de Domínio do jogo.
 ### Modelo de Domínio
 
 <center>
-    <img src="/img/Domain.png" alt="Domain" width="400%" />
+    <img src="/img/Domain.png" alt="Domain" scale="15" />
 </center>
