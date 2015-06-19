@@ -3,7 +3,7 @@
     <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Faq_instalar | Space Wars </title>
+  <title> Regras de Negócio | Space Wars </title>
   <!-- <link rel="stylesheet" href="/css/sprockets-octicons.css"> -->
   <link rel="stylesheet" href="/css/foundation.css">
   <link rel="stylesheet" href="/css/normalize.css">
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300|Play|Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
   <script src="/js/vendor/modernizr.js"></script>
-  <link rel="canonical" href="http://spacewars.github.io/faq/2015/03/30/faq_instalar.html">
+  <link rel="canonical" href="http://spacewars.github.io/doc/2015/05/30/regras.html">
   <link rel="alternate" type="application/rss+xml" title="Space Wars" attr="http://spacewars.github.io/feed.xml">
 </head>
 
@@ -48,7 +48,48 @@ grenythzn pbvfn ab svany qn qvfpvcyvan. (3)
         <div class="row">
           <div class="small-12 medium-10 large-10 small-centered columns">
             <br>
-            
+            <h1 id="regras-de-negcio">Regras de Negócio</h1>
+
+<h2 id="finalidade">Finalidade</h2>
+
+<p>Este documento descreve as regras de negocio do projeto <strong>SpaceWars</strong>.</p>
+
+<h2 id="escopo">Escopo</h2>
+
+<p>O escopo do documento limita-se a identificar, agrupar e descrever detalhadamente cada regra de negócio que o sistema deve seguir.</p>
+
+<h2 id="definies">Definições </h2>
+
+<blockquote>
+  <h3 id="regra-1-score">[Regra 1] Score:</h3>
+  <p>O jogador não poderá alterar seu escore diretamente, só através do jogo. A pontuação deverá aumentar a medida em que os inimigos são destruídos.</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="regra-2-movimentao">[Regra 2] Movimentação:</h3>
+  <p>O jogador poderá se mover somente na parte inferior da tela. Quando atingir o limite, mesmo que ele aperte o botão de mover, o jogador continuará no mesmo lugar.</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="regra-3-ganhar-o-jogo">[Regra 3] Ganhar o jogo:</h3>
+  <p>O jogador passa de fase se destruir todos os inimigos da fase. Passando de fase, ele libera a seguinte. Quando ele conseguir destruir todos os inimigos de todas as fases, ele ganha o jogo.</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="regra-4-perder-o-jogo">[Regra 4] Perder o Jogo:</h3>
+  <p>Se o jogador for atingido por Aerolitos, Rohinianos ou tiros dos Rohinianos, ele perde uma parte da sua vida. Quando sua vida atingir 0 ele morre e deverá iniciar a fase do inicio.</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="regra-5-atirar">[Regra 5] Atirar:</h3>
+  <p>O jogador poderá atirar, com o objetivo de se defender e destruir os inimigos. Ele terá direito à 90 tiros, quando essa quantidade acabar, deverá esperar um tempo para recarregar sua arma.</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="regra-6-destruir-inimigos">[Regra 6] Destruir Inimigos:</h3>
+  <p>Se o tiro disparado pelo usuário atingir um Rohiniano ou Aerolito, eles perdem uma quantidade fixa de vida. Quando a vida dos inimigos se iguala a 0, eles são destruídos.</p>
+</blockquote>
+
 
           </div>
         </div>

@@ -6,9 +6,288 @@
 </description>
     <link>http://spacewars.github.io/</link>
     <atom:link href="http://spacewars.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Jun 2015 14:21:38 -0300</pubDate>
-    <lastBuildDate>Wed, 17 Jun 2015 14:21:38 -0300</lastBuildDate>
+    <pubDate>Thu, 18 Jun 2015 22:29:51 -0300</pubDate>
+    <lastBuildDate>Thu, 18 Jun 2015 22:29:51 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Documentação Suplementar</title>
+        <description>&lt;h1 id=&quot;documentao-suplementar&quot;&gt;Documentação Suplementar&lt;/h1&gt;
+
+&lt;h2 id=&quot;objetivos&quot;&gt;Objetivos&lt;/h2&gt;
+
+&lt;p&gt;Tem como objetivo a destruição dos inimigos no cenário assim como alcançar o ponto final da fase sem colidir com nenhum objeto ou ser acertado por um tiro das naves inimigas.&lt;/p&gt;
+
+&lt;h2 id=&quot;escopo&quot;&gt;Escopo&lt;/h2&gt;
+
+&lt;p&gt;Um jogo agressivo, brutal, &lt;em&gt;oldschool&lt;/em&gt; e tenso. Seus nervos serão tensionados ao limite para expor suas emoções com o auxilio de cometas, e naves espaciais.&lt;/p&gt;
+
+&lt;h2 id=&quot;referncias&quot;&gt;Referências&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Invaders&quot;&gt;Space Invaders&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pydoc.net/Python/cocos2d/&quot;&gt;Pydoc oficial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Pandoc&quot;&gt;Pandoc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pt.wikipedia.org/wiki/Jogo_eletr%C3%B4nico_de_tiro&quot;&gt;Shut’em Up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;funcionalidade&quot;&gt;Funcionalidade&lt;/h2&gt;
+
+&lt;p&gt;Os inimigos alienigenas aparecem na tela de forma aleatória, bem como os detritos espaciais. A medida que o jogador vai avançando, a quantidade de objetos (tanto alienigenas quanto detritos) aparecendo na tela aumenta, proporcionando ao jogador oportunidade de obter mais experiência e aumentando a dificuldade do jogo. Ao atingir certas quantidades de experiência, o usuário poderá liberar outras fases, com características diferentes.&lt;/p&gt;
+
+&lt;h2 id=&quot;usabilidade&quot;&gt;Usabilidade&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;SpaceWars&lt;/strong&gt; é um jogo no estilo &lt;em&gt;Shut’em up&lt;/em&gt;, onde o jogador controla uma espaçonave e deve destruir todos os inimigos, tanto os Rohinianos quanto os aerolitos.&lt;/li&gt;
+  &lt;li&gt;O jogo será controlado pelo teclado ou joystick de Xbox One.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;confiabilidade&quot;&gt;Confiabilidade&lt;/h2&gt;
+
+&lt;p&gt;O jogo deverá tratar os possíveis erros para que não pareça uma falha muito grande para o usuário.&lt;/p&gt;
+
+&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Leitura de entradas em tempo menor que 0.9 segundos&lt;/li&gt;
+  &lt;li&gt;Deverá manter FPS maior que 25, sendo 60 o ideal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;suportabilidade&quot;&gt;Suportabilidade&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O jogo deverá ser &lt;em&gt;Open Source&lt;/em&gt;, no intuito de permitir contribuição da comunidade.&lt;/li&gt;
+  &lt;li&gt;O jogo terá suporte à plataformas Linux e OS X.&lt;/li&gt;
+  &lt;li&gt;Será necessário o Kernel 3.17, para que o joystick do Xbox One seja identificado.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sistema-de-ajuda-e-documentao-de-usurio&quot;&gt;Sistema de Ajuda e Documentação de Usuário&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O jogo deverá possuir um manual do usuário, com informações de instalação e configuração de ambiente, bem como instruções de como jogar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;interface&quot;&gt;Interface&lt;/h2&gt;
+
+&lt;h3 id=&quot;interface-de-usurio&quot;&gt;Interface de Usuário&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pelo fato da equipe não possuir nenhum designer, toda a interface de usuário deve possuir imagens com autorização prévia de utilização (Creative Commons).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;interface-de-software&quot;&gt;Interface de Software&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O jogo não necessita de interagir com nenhum outro software.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;interface-de-hardware&quot;&gt;Interface de Hardware&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deverá ser possível utilizar um joystick para melhorar a jogabilidade.&lt;/li&gt;
+  &lt;li&gt;Para facilitar a integração, o sistema deverá oferecer suporte ao joystick de Xbox One.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;restries-de-design&quot;&gt;Restrições de Design&lt;/h2&gt;
+
+&lt;h4 id=&quot;python&quot;&gt;Python&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O jogo deve dar suporte para Python 2.7&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;sistema-operacional&quot;&gt;Sistema Operacional&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O jogo deve ser jogavel em sistemas Linux com kernel 3.0 ou mais recente.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 17 Jun 2015 18:50:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/06/17/suplementar.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/06/17/suplementar.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
+    
+      <item>
+        <title>Manual do Usuário</title>
+        <description>&lt;blockquote&gt;
+  &lt;h1 id=&quot;manual-do-usurio&quot;&gt;Manual do Usuário&lt;/h1&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;requisitos&quot;&gt;Requisitos&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AMD E-450, dual core 1,66Ghz&lt;/li&gt;
+  &lt;li&gt;1GB DDR3&lt;/li&gt;
+  &lt;li&gt;10MB (free space)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;instalando-spacewars-em-seu-computador&quot;&gt;Instalando &lt;strong&gt;SpaceWars&lt;/strong&gt; em seu computador&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Baixe o &lt;a href=&quot;https://github.com/SpaceWars/spacewars/archive/master.zip&quot;&gt;código fonte&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Descompacte-o em seu lugar de preferencia.
+    &lt;ul&gt;
+      &lt;li&gt;É necessário que se possa executar arquivos no diretório, então evite lugares como um disco de partição FAT32/NTFS enquanto estiver usando sistemas Unix/Linux, assim como mídias moveis.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Instale as dependências:
+    &lt;ul&gt;
+      &lt;li&gt;Python 2.7&lt;/li&gt;
+      &lt;li&gt;python-cocos2d (&amp;lt;=0.6.0)&lt;/li&gt;
+      &lt;li&gt;python-pyglet (&amp;lt;=1.2.2)&lt;/li&gt;
+      &lt;li&gt;python-six (&amp;lt;=1.9.0)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Para aqueles que possuem o &lt;em&gt;pip&lt;/em&gt; instalado em seus computadores, podem instalar as depêndencias executando o seguinte comando na raiz do jogo:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;pre&gt;&lt;code&gt;# pip install -r requeriments
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;executando-spacewars-em-seu-computador&quot;&gt;Executando &lt;strong&gt;SpaceWars&lt;/strong&gt; em seu computador&lt;/h2&gt;
+
+&lt;p&gt;Com as dependências instaladas, basta executar o arquivo &lt;strong&gt;SpaceWars&lt;/strong&gt; localizado na raiz do diretório onde o jogo foi descompactado. Para àqueles que desejam que o jogo possa ser executado a partir de um laucher ou de qualquer diretório a partir de um terminal, basta gerar um link simbolico do executavel para a pasta &lt;em&gt;/usb/bin&lt;/em&gt; ou para a &lt;em&gt;~/bin&lt;/em&gt;. Tendo o endereço completo do executavel como &lt;em&gt;*~/Downloads/SpaceWars/SpaceWars&lt;/em&gt; por exemplo, o seguinte comando irá criar o desejavel link simbolico:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;pre&gt;&lt;code&gt;# ln -s ~/Downloads/SpaceWars/SpaceWars /usr/bin/SpaceWars
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;desinstalando-spacewars-em-seu-computador&quot;&gt;Desinstalando &lt;strong&gt;SpaceWars&lt;/strong&gt; em seu computador&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;SpaceWars&lt;/strong&gt; não gera nenhum arquivo fora do seu diretório. Basta remover a pasta pa se ver livre do jogo. Caso tenha criado um link simbolico em &lt;em&gt;/usb/bin&lt;/em&gt;, será necessario remove-lo manualmente também.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h1 id=&quot;game-controls&quot;&gt;Game Controls&lt;/h1&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;teclado&quot;&gt;Teclado&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;← ↑ → ↓
+    &lt;ul&gt;
+      &lt;li&gt;Controle da nave e navegação em menus.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Barra de Espaço
+    &lt;ul&gt;
+      &lt;li&gt;Atira&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enter
+    &lt;ul&gt;
+      &lt;li&gt;Confirmação de ação nos menus.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Esc
+    &lt;ul&gt;
+      &lt;li&gt;Retorno de telas na navegação de menus ou abertura de menu durante o jogo.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;joystick&quot;&gt;Joystick&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Direcionais
+    &lt;ul&gt;
+      &lt;li&gt;Controle da nave e navegação em menus.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Botões
+    &lt;ul&gt;
+      &lt;li&gt;Atira&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h1 id=&quot;game-interface&quot;&gt;Game Interface&lt;/h1&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;
+    &lt;img src=&quot;/img/game_cene.png&quot; alt=&quot;Conceito - Fase&quot; width=&quot;60%&quot; /&gt;
+&lt;/center&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Você&lt;/li&gt;
+  &lt;li&gt;Alguns &lt;em&gt;Rohinianos&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Aerólitos (Cuidado!)&lt;/li&gt;
+  &lt;li&gt;Seu tiro&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 17 Jun 2015 15:00:00 -0300</pubDate>
+        <link>http://spacewars.github.io/manual/2015/06/17/usuario.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/manual/2015/06/17/usuario.html</guid>
+        
+        
+        <category>manual</category>
+        
+      </item>
+    
+      <item>
+        <title>Regras de Negócio</title>
+        <description>&lt;h1 id=&quot;regras-de-negcio&quot;&gt;Regras de Negócio&lt;/h1&gt;
+
+&lt;h2 id=&quot;finalidade&quot;&gt;Finalidade&lt;/h2&gt;
+
+&lt;p&gt;Este documento descreve as regras de negocio do projeto &lt;strong&gt;SpaceWars&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;escopo&quot;&gt;Escopo&lt;/h2&gt;
+
+&lt;p&gt;O escopo do documento limita-se a identificar, agrupar e descrever detalhadamente cada regra de negócio que o sistema deve seguir.&lt;/p&gt;
+
+&lt;h2 id=&quot;definies&quot;&gt;Definições &lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;regra-1-score&quot;&gt;[Regra 1] Score:&lt;/h3&gt;
+  &lt;p&gt;O jogador não poderá alterar seu escore diretamente, só através do jogo. A pontuação deverá aumentar a medida em que os inimigos são destruídos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;regra-2-movimentao&quot;&gt;[Regra 2] Movimentação:&lt;/h3&gt;
+  &lt;p&gt;O jogador poderá se mover somente na parte inferior da tela. Quando atingir o limite, mesmo que ele aperte o botão de mover, o jogador continuará no mesmo lugar.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;regra-3-ganhar-o-jogo&quot;&gt;[Regra 3] Ganhar o jogo:&lt;/h3&gt;
+  &lt;p&gt;O jogador passa de fase se destruir todos os inimigos da fase. Passando de fase, ele libera a seguinte. Quando ele conseguir destruir todos os inimigos de todas as fases, ele ganha o jogo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;regra-4-perder-o-jogo&quot;&gt;[Regra 4] Perder o Jogo:&lt;/h3&gt;
+  &lt;p&gt;Se o jogador for atingido por Aerolitos, Rohinianos ou tiros dos Rohinianos, ele perde uma parte da sua vida. Quando sua vida atingir 0 ele morre e deverá iniciar a fase do inicio.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;regra-5-atirar&quot;&gt;[Regra 5] Atirar:&lt;/h3&gt;
+  &lt;p&gt;O jogador poderá atirar, com o objetivo de se defender e destruir os inimigos. Ele terá direito à 90 tiros, quando essa quantidade acabar, deverá esperar um tempo para recarregar sua arma.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;regra-6-destruir-inimigos&quot;&gt;[Regra 6] Destruir Inimigos:&lt;/h3&gt;
+  &lt;p&gt;Se o tiro disparado pelo usuário atingir um Rohiniano ou Aerolito, eles perdem uma quantidade fixa de vida. Quando a vida dos inimigos se iguala a 0, eles são destruídos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Sat, 30 May 2015 07:00:03 -0300</pubDate>
+        <link>http://spacewars.github.io/doc/2015/05/30/regras.html</link>
+        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/05/30/regras.html</guid>
+        
+        
+        <category>doc</category>
+        
+      </item>
     
       <item>
         <title>Padrões de Projeto de Software</title>
@@ -46,7 +325,7 @@ Outro padrão bastante comum em jogos é a presença de uma *pool* de objetos. E
 
         def __init__(self):
             super(GameScene, self).__init__()
-            self.background = BackgroundLayer(&#39;backgrounds/bluespace.png&#39;)
+            self.background = BackgroundLayer('backgrounds/bluespace.png')
             self.spaceship = SpaceShipSprite()
             self.aerolites = []
             self.rohenians = []
@@ -67,9 +346,9 @@ def signal_handler(signal_received, frame):
         exit(0)
 
 if __name__ == &quot;__main__&quot;:
-    resource.path.append(&#39;data&#39;)
+    resource.path.append('data')
     resource.reindex()
-    font.add_directory(&#39;data/fonts&#39;)
+    font.add_directory('data/fonts')
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGSEGV, signal_handler)
@@ -103,7 +382,7 @@ class SpaceshipAction(actions.Move):
         if self.target.position[0] &gt; max_right:
             self.target.position = (max_right, 100)
 
-        # Set the object&#39;s velocity.
+        # Set the object's velocity.
         self.target.velocity = (velocity_x, velocity_y)
         if keyboard[key.LEFT]:
             self.target.move_left()
@@ -127,7 +406,7 @@ class SpaceshipAction(actions.Move):
 keyboard = None
 
 def __new__(cls):
-    if not hasattr(cls, &#39;instance&#39;):
+    if not hasattr(cls, 'instance'):
         cls.instance = super(EventHandle, cls).__new__(cls)
     return cls.instance
 &lt;/code&gt;&lt;/pre&gt;
@@ -151,10 +430,10 @@ EventHandle().keyboard = keyboard
 
     &quot;&quot;&quot;docstring for FireFactory&quot;&quot;&quot;
 
-    ammo = {&#39;hero&#39;: [], &#39;enemies&#39;: []}
+    ammo = {'hero': [], 'enemies': []}
 
     def __new__(cls):
-        if not hasattr(cls, &#39;instance&#39;):
+        if not hasattr(cls, 'instance'):
             cls.instance = super(FireFactory, cls).__new__(cls)
         return cls.instance
 
@@ -162,10 +441,10 @@ EventHandle().keyboard = keyboard
     def create_bullets(cls, bullet_type, qnt=50):
         if bullet_type in hero:
             for x in xrange(0, qnt):
-                cls.ammo[&#39;hero&#39;].append(SpaceShipBullet())
+                cls.ammo['hero'].append(SpaceShipBullet())
         elif bullet_type in rohenian:
             for x in xrange(0, qnt):
-                cls.ammo[&#39;enemies&#39;].append(RoheniansBullet())
+                cls.ammo['enemies'].append(RoheniansBullet())
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;combo-factory-singleton-pool-dirty-flag&quot;&gt;Combo: Factory-Singleton-Pool-Dirty Flag&lt;/h2&gt;
@@ -182,7 +461,7 @@ EventHandle().keyboard = keyboard
     enemy_list = {&quot;Rohenian&quot;: [], &quot;Aerolite&quot;: []}
 
     def __new__(cls):
-        if not hasattr(cls, &#39;instance&#39;):
+        if not hasattr(cls, 'instance'):
             cls.instance = super(EnemyFactory, cls).__new__(cls)
         cls.empty = True
         return cls.instance
@@ -242,7 +521,9 @@ EventHandle().keyboard = keyboard
     
       <item>
         <title>Documento de Arquitetura</title>
-        <description>&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
+        <description>&lt;h1 id=&quot;doc-de-arquitetura&quot;&gt;Doc. de Arquitetura&lt;/h1&gt;
+
+&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;No ano de 3500, os seres do planeta &lt;em&gt;Rohines&lt;/em&gt; invadem a Terra em busca de água, algo que há muito já se tornara escasso e motivo para guerras intergalácticas. Nessa busca incansável, os &lt;em&gt;Rohinianos&lt;/em&gt; destruíram parte do planeta e poucos seres humanos sobreviveram. Em &lt;strong&gt;SpaceWars&lt;/strong&gt;, o jogador encorpora um dos poucos sobreviventes do Massacre &lt;em&gt;Rohiniano&lt;/em&gt; e deve escapar da Terra e ir em direção à &lt;em&gt;Ascarth&lt;/em&gt;, um planeta colonizado pelos seres humanos e um abrigo totalmente seguro. Mas para isso, o jogador deverá passar por toda a galáxia e enfrentar as piores raças inimigas que já viu!&lt;/p&gt;
 
@@ -257,67 +538,86 @@ EventHandle().keyboard = keyboard
 &lt;h2 id=&quot;representao-da-arquitetura&quot;&gt;Representação da Arquitetura&lt;/h2&gt;
 
 &lt;center&gt;
-    &lt;img src=&quot;/img/arquitetura.png&quot; alt=&quot;Diagrama de Arquitetura&quot; width=&quot;70%&quot; /&gt;
+    &lt;img src=&quot;/img/arquitetura.png&quot; alt=&quot;Diagrama de Arquitetura&quot; width=&quot;50%&quot; /&gt;
 &lt;/center&gt;
 
 &lt;h2 id=&quot;metas-e-restries-de-arquitetura&quot;&gt;Metas e Restrições de Arquitetura&lt;/h2&gt;
 
 &lt;p&gt;O jogo deve ser jogável em sistemas operacionais Linux e Mac OS X e não requisitar placa de video dedicada. Deve conseguir manter o &lt;em&gt;framerate&lt;/em&gt; mínimo de 30 fps e não requisitar mais que 1GB de RAM. A distribuição deve ser gratuita sob licença GPL3, com direito ao código fonte.&lt;/p&gt;
 
-&lt;!-- # Visão de Casos de Uso
+&lt;h2 id=&quot;viso-de-cenrios&quot;&gt;Visão de Cenários&lt;/h2&gt;
 
-[Esta seção lista os casos de uso ou cenários do modelo de casos de uso se eles representam uma funcionalidade central e significativa do sistema final ou se têm uma ampla cobertura de arquitetura, ou seja, se experimentam muitos elementos arquiteturais ou se enfatizam ou ilustram um determinado ponto frágil da arquitetura.]
+&lt;p&gt;Devido ao fato do SpaceWars não ter sido descrito usando casos de uso, aqui, serão utilizados os cenários descritos. O conjunto de cenários a seguir representam a justificativa para a arquitetura proposta:&lt;/p&gt;
 
-### Realizações de Casos de Uso
+&lt;ul&gt;
+  &lt;li&gt;Menu Inicial&lt;/li&gt;
+  &lt;li&gt;Iniciar fase&lt;/li&gt;
+  &lt;li&gt;Dinâmica do SpaceWars&lt;/li&gt;
+  &lt;li&gt;Movimentar Spaceship&lt;/li&gt;
+  &lt;li&gt;Atira&lt;/li&gt;
+  &lt;li&gt;Perde o Jogo&lt;/li&gt;
+  &lt;li&gt;Avança de Nível&lt;/li&gt;
+  &lt;li&gt;Créditos&lt;/li&gt;
+  &lt;li&gt;Configurações&lt;/li&gt;
+&lt;/ul&gt;
 
-[Esta seção ilustra o funcionamento do software, apresentando algumas realizações (ou cenários) de casos de uso selecionadas e explica como os diversos elementos do modelo de design contribuem para a respectiva funcionalidade.]
+&lt;h3 id=&quot;cenrios-significativos-para-a-arquitetura&quot;&gt;Cenários Significativos para a Arquitetura&lt;/h3&gt;
 
-# Visão Lógica
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Menu Inicial:&lt;/strong&gt; Neste cenário, o usuário terá o poder de escolher a ação desejada: Jogar, Configurar, ver Créditos ou sair do jogo.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Iniciar Fase:&lt;/strong&gt; Neste cenário, o usuário será capaz de escolher a fase desejada e dar início ao jogo. É o cenário responsável por dar início aos outros cenários.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dinâmica do SpaceWars:&lt;/strong&gt; Este cenário representa a lógica do jogo, onde o usuário poderá se movimentar, atirar, perder o jogo ou avançar de nível.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Movimentar SpaceShip:&lt;/strong&gt; Aqui, o usuário será capaz de controlar a nave, que representa o usuário dentro do game. O usuário poderá se mover para frente, para trás, para a esquerda e para a direita.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Atirar:&lt;/strong&gt; Para conseguir cumprir o objetivo do jogo, o jogador deverá destruir os inimigos que aparecerem na tela, para isso ele deverá atirar neles, apertando o botão específico para tal ação.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Perde o jogo:&lt;/strong&gt; Caso o jogado seja atingido por algum inimigo, ele perde o jogo e entra num menu com as opções de sair ou reiniciar a partida.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Configurações:&lt;/strong&gt; O usuário deve conseguir controlar algumas configurações do jogo, como volume da música e dos sons do jogo, se deseja jogar em modo fullscreen ou em modo janela e se deseja exibir o frame rate do jogo.&lt;/li&gt;
+&lt;/ul&gt;
 
-[Esta seção descreve as partes significativas do ponto de vista da arquitetura do modelo de design, como sua divisão em subsistemas e pacotes. Além disso, para cada pacote significativo, ela mostra sua divisão em classes e utilitários de classe. Apresente as classes significativas do ponto de vista da arquitetura e descreva suas responsabilidades, bem como alguns relacionamentos, operações e atributos de grande importância.]
+&lt;h2 id=&quot;visualizao-lgica&quot;&gt;Visualização Lógica&lt;/h2&gt;
 
-### Visão Geral
+&lt;h3 id=&quot;viso-geral&quot;&gt;Visão Geral&lt;/h3&gt;
 
-[Esta subseção descreve toda a decomposição do modelo de design em termos de camadas e de hierarquia de pacotes.]
+&lt;p&gt;A aplilcação está divida em, basciamente, três camadas: Engine, Game e Layers.&lt;/p&gt;
 
-### Pacotes de Design Significativos do Ponto de Vista da Arquitetura
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Tudo relacionado às engines necessárias para que o jog aconteça. Módulos que cuidam das ações realizadas pelos inimigos, por exemplo.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Game:&lt;/strong&gt; Onde se encontram as cenas e sprites do jogo. Utilizando da engine, as cenas e sprites são responsáveis por renderizar o game para o usuário.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Layers:&lt;/strong&gt; Camada criada, basicamente, para separar as Layers específicas de menu.&lt;/li&gt;
+&lt;/ul&gt;
 
-[Para cada pacote significativo, inclua uma subseção com o respectivo nome, uma breve descrição e um diagrama com todos os pacotes e classes significativos nele contidos.
+&lt;center&gt;
+    &lt;img src=&quot;/img/arq-camadas.png&quot; alt=&quot;Visão Lógica&quot; width=&quot;80%&quot; /&gt;
+&lt;/center&gt;
 
-Para cada classe significativa no pacote, inclua o respectivo nome, uma breve descrição e, opcionalmente, uma descrição de algumas de suas responsabilidades, operações e atributos mais importantes.]
+&lt;h3 id=&quot;viso-lgica&quot;&gt;Visão Lógica&lt;/h3&gt;
 
-# Visão de Processos
+&lt;h4 id=&quot;camada-engine&quot;&gt;Camada Engine&lt;/h4&gt;
 
-[Esta seção descreve a decomposição do sistema em processos leves (threads simples de controle) e processos pesados (agrupamentos de processos leves). Organize a seção em grupos de processos que se comunicam ou interagem. Descreva os modos principais de comunicação entre processos, como transmissão de mensagens e interrupções.]
+&lt;center&gt;
+    &lt;img src=&quot;/img/arq-action.png&quot; alt=&quot;Camada Engine - Pacote action&quot; /&gt;
+    &lt;img src=&quot;/img/arq-enemy.png&quot; alt=&quot;Camada Engine - Pacote enemy&quot; /&gt;
+    &lt;img src=&quot;/img/arq-event.png&quot; alt=&quot;Camada Engine - Pacote event&quot; /&gt;
+    &lt;img src=&quot;/img/arq-gunfire.png&quot; alt=&quot;Camada Engine - Pacote gunfire&quot; /&gt;
+&lt;/center&gt;
 
-# Visão de Implantação
+&lt;h3 id=&quot;camada-game&quot;&gt;Camada Game&lt;/h3&gt;
 
-[Esta seção descreve uma ou mais configurações da rede física (hardware) na qual o software é implantado e executado. Ela é uma visão do Modelo de Implantação. Para cada configuração, ela deve indicar no mínimo os nós físicos (computadores, CPUs) que executam o software e as respectivas interconexões (barramento, LAN, ponto a ponto e assim por diante.) Inclua também um mapeamento dos processos da Visão de Processos nos nós físicos.]
+&lt;center&gt;
+    &lt;img src=&quot;/img/arq-sprites.png&quot; alt=&quot;Camada Game - Pacote sprites&quot; /&gt;
+    &lt;img src=&quot;/img/arq-scenes.png&quot; alt=&quot;Camada Game - Pacote scenes&quot; /&gt;
+&lt;/center&gt;
 
-# Visão de Implementação
+&lt;h3 id=&quot;camada-layer&quot;&gt;Camada Layer&lt;/h3&gt;
 
-[Esta seção descreve a estrutura geral do modelo de implementação, a divisão do software em camadas e subsistemas no modelo de implementação e todos os componentes significativos do ponto de vista da arquitetura.]
-
-### Visão Geral
-
-[Esta subseção nomeia e define as diversas camadas e o seu conteúdo, as regras que determinam a inclusão em uma camada específica e as fronteiras entre as camadas. Inclua um diagrama de componentes que mostre os relacionamentos entre as camadas. ]
-
-### Camadas
-
-[Para cada camada, inclua uma subseção com o respectivo nome, uma lista dos subsistemas localizados na camada e um diagrama de componentes.]
-
-# Visão de Dados (opcional)
-
-[Uma descrição da perspectiva de armazenamento de dados persistentes do sistema. Esta seção será opcional se os dados persistentes forem poucos ou inexistentes ou se a conversão entre o Modelo de Design e o Modelo de Dados for trivial.] --&gt;
+&lt;center&gt;
+    &lt;img src=&quot;/img/arq-menu.png&quot; alt=&quot;Camada Layer - Pacote menu&quot; /&gt;
+    &lt;img src=&quot;/img/arq-baselayers.png&quot; alt=&quot;Camada Layer - Pacote base_layers&quot; /&gt;
+&lt;/center&gt;
 
 &lt;h2 id=&quot;tamanho-e-desempenho&quot;&gt;Tamanho e Desempenho&lt;/h2&gt;
 
 &lt;p&gt;O Software final deve ser menor que 1GB e requisitarmenos de 1GB de RAM para executar com desempenho mínimo de 30fps.&lt;/p&gt;
 
-&lt;!-- # Qualidade
-
-[Uma descrição de como a arquitetura do software contribui para todos os recursos (exceto a funcionalidade) do sistema: extensibilidade, confiabilidade, portabilidade e assim por diante. Se essas características tiverem significado especial, como, por exemplo, implicações de proteção, segurança ou privacidade, elas devem ser claramente delineadas.]
- --&gt;
 </description>
         <pubDate>Sat, 11 Apr 2015 07:00:03 -0300</pubDate>
         <link>http://spacewars.github.io/doc/2015/04/11/arquitetura.html</link>
@@ -351,7 +651,7 @@ Para cada classe significativa no pacote, inclua o respectivo nome, uma breve de
         <description>&lt;h3 id=&quot;modelo-de-domnio&quot;&gt;Modelo de Domínio&lt;/h3&gt;
 
 &lt;center&gt;
-    &lt;img src=&quot;/img/Domain.png&quot; alt=&quot;Domain&quot; width=&quot;400%&quot; /&gt;
+    &lt;img src=&quot;/img/Domain.png&quot; alt=&quot;Domain&quot; scale=&quot;15&quot; /&gt;
 &lt;/center&gt;
 </description>
         <pubDate>Thu, 09 Apr 2015 20:12:00 -0300</pubDate>
@@ -415,140 +715,6 @@ Para cada classe significativa no pacote, inclua o respectivo nome, uma breve de
         <pubDate>Thu, 09 Apr 2015 19:11:00 -0300</pubDate>
         <link>http://spacewars.github.io/doc/2015/04/09/diagram_state_config.html</link>
         <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/09/diagram_state_config.html</guid>
-        
-        
-        <category>doc</category>
-        
-      </item>
-    
-      <item>
-        <title>Máquina de Estado</title>
-        <description>&lt;div class=&quot;row&quot;&gt;
-    &lt;h3&gt;Durante o jogo&lt;/h3&gt;
-  &lt;div class=&quot;small-11 small-centered columns&quot;&gt;
-    &lt;script src=&quot;/js/mermaid.full.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt;
-      graph TD
-        A((1&lt;br /&gt;Iniciando partida&lt;br /&gt;e: Inicia partida)) --&amp;gt;|Inicia fase| B((2&lt;br /&gt;Iniciando fase&lt;br /&gt;e:Inicia fase))
-        B --&amp;gt;|Joga fase| C((3&lt;br /&gt;Jogando&lt;br /&gt;e: Joga fase))
-        C --&amp;gt;|Pausa| D((4&lt;br /&gt;Jogo pausado&lt;br /&gt;e: Pausa fase))
-        D --&amp;gt;|Volta ao jogo| C
-        D --&amp;gt;|Reinicia fase| B
-        C --&amp;gt;|Morre| E((5&lt;br /&gt;Morto&lt;br /&gt;e: Morre))
-        C --&amp;gt;|Conclui fase| F((6&lt;br /&gt;Fase concluída&lt;br /&gt;e: Conclui fase))
-        F --&amp;gt;|Inicia nova fase| B
-        E --&amp;gt;|Reinicia fase| B 
-        D --&amp;gt;|Termina partida| G((7&lt;br /&gt;Partida terminada&lt;br /&gt;e: Termina partida))
-        E --&amp;gt;|Termina partida| G
-        F --&amp;gt;|Termina partida| G
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 09 Apr 2015 18:11:00 -0300</pubDate>
-        <link>http://spacewars.github.io/doc/2015/04/09/maquina_de_estado.html</link>
-        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/09/maquina_de_estado.html</guid>
-        
-        
-        <category>doc</category>
-        
-      </item>
-    
-      <item>
-        <title>Léxicos</title>
-        <description>&lt;h1 id=&quot;lxicos&quot;&gt;Léxicos&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-    &lt;br /&gt;&lt;center&gt;
-    &lt;table&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th&gt;&lt;b&gt;Termo&lt;/b&gt;&lt;/th&gt;
-                &lt;th&gt;Denotação&lt;/th&gt;
-                &lt;th&gt;Conotação&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Jogador&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Alguém que executa o programa a fim de jogar.&lt;/td&gt;
-                &lt;td&gt;Abre o jogo, seleciona fase e joga.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Inimigo&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Objeto não controlado pelo jogador.&lt;/td&gt;
-                &lt;td&gt;Atinge o jogador, reduzindo sua vida.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Denotação&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Espaçonave controlada pelo jogador.&lt;/td&gt;
-                &lt;td&gt;Movimentada pelo jogador, capaz de atirar.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Spaceship&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Objeto não controlado pelo jogador.&lt;/td&gt;
-                &lt;td&gt;Atinge o jogador, reduzindo sua vida.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Fase&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Ambiente que contém jogador e inimigos.&lt;/td&gt;
-                &lt;td&gt;Selecionada pelo jogador.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;Adentrada à medida que o jogador conclui a fase anterior com sucesso.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Rohinianos&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Inimigo nascido em Rohines.&lt;/td&gt;
-                &lt;td&gt;Atinge o jogador, reduzindo sua vida.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;Objeto não controlado pelo jogador.&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Ascarth&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Planeta colonizado por seres humanos.&lt;/td&gt;
-                &lt;td&gt;Planeta a ser alcançado pelo jogador.&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;Abrigo seguro para humanos sendo caçados.&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;b&gt;Disparo&lt;/b&gt;&lt;/td&gt;
-                &lt;td&gt;Tipo de munição utilizada pelo jogador.&lt;/td&gt;
-                &lt;td&gt;O jogador dispara, se atingir algum inimigo, este é destruído.&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;&lt;/center&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sun, 05 Apr 2015 13:50:03 -0300</pubDate>
-        <link>http://spacewars.github.io/doc/2015/04/05/lexicos.html</link>
-        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/lexicos.html</guid>
-        
-        
-        <category>doc</category>
-        
-      </item>
-    
-      <item>
-        <title>Fluxo de Cenários</title>
-        <description>&lt;h1 id=&quot;fluxo-de-cenrios&quot;&gt;Fluxo de Cenários&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;center&gt;
-    &lt;img src=&quot;/img/fluxo.png&quot; alt=&quot;Fluxo de Cenários&quot; width=&quot;80%&quot; /&gt;
-&lt;/center&gt;
-</description>
-        <pubDate>Sun, 05 Apr 2015 05:51:03 -0300</pubDate>
-        <link>http://spacewars.github.io/doc/2015/04/05/fluxo.html</link>
-        <guid isPermaLink="true">http://spacewars.github.io/doc/2015/04/05/fluxo.html</guid>
         
         
         <category>doc</category>

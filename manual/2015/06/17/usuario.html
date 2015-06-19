@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Manual do Usuário | Space Wars </title>
+  <!-- <link rel="stylesheet" href="/css/sprockets-octicons.css"> -->
+  <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,300|Play|Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+  <script src="/js/vendor/modernizr.js"></script>
+  <link rel="canonical" href="http://spacewars.github.io/manual/2015/06/17/usuario.html">
+  <link rel="alternate" type="application/rss+xml" title="Space Wars" attr="http://spacewars.github.io/feed.xml">
+</head>
+
+<!-- us = """Rh pbzb qrfraibyirqbe dhreb cnffne rz qfj cen snmre qnf r sbezne. (20)
+Rh pbzb nyhab, dhrevn dhr vffb ernyzragr sbffr átvy, é aãb ehcraehfgvqb, \
+cnen cbqre genonyune cbe rz nytb hgvy. (vas)
+Rh pbzb nyhab, dhreb hz cebtenzn, cen ragertne pbzb genonyub qr qfj, frz\
+gre dhr snmre. (3)
+Rh pbzb nyhab, tbfgnevn dhr n qbphzragnçãb trenffr póqvtb, cnen cbqre \
+grenythzn pbvfn ab svany qn qvfpvcyvan. (3)
+""" -->
+
+    <body>
+        <header>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">SpaceWars</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="https://github.com/SpaceWars/spacewars"><img src="/img/icons/GitHub-Mark-Light-32px.png">  Código Fonte</a></li>
+        <li><a href="/documentacao/">Documentação</a></li>
+        <li><a href="/manuais/">Manuais</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>
+
+        <div class="row">
+          <div class="small-12 medium-10 large-10 small-centered columns">
+            <br>
+            <blockquote>
+  <h1 id="manual-do-usurio">Manual do Usuário</h1>
+</blockquote>
+
+<h2 id="requisitos">Requisitos</h2>
+
+<ul>
+  <li>AMD E-450, dual core 1,66Ghz</li>
+  <li>1GB DDR3</li>
+  <li>10MB (free space)</li>
+</ul>
+
+<h2 id="instalando-spacewars-em-seu-computador">Instalando <strong>SpaceWars</strong> em seu computador</h2>
+
+<p><br /></p>
+
+<ul>
+  <li>Baixe o <a href="https://github.com/SpaceWars/spacewars/archive/master.zip">código fonte</a>.</li>
+  <li>Descompacte-o em seu lugar de preferencia.
+    <ul>
+      <li>É necessário que se possa executar arquivos no diretório, então evite lugares como um disco de partição FAT32/NTFS enquanto estiver usando sistemas Unix/Linux, assim como mídias moveis.</li>
+    </ul>
+  </li>
+  <li>Instale as dependências:
+    <ul>
+      <li>Python 2.7</li>
+      <li>python-cocos2d (&lt;=0.6.0)</li>
+      <li>python-pyglet (&lt;=1.2.2)</li>
+      <li>python-six (&lt;=1.9.0)</li>
+    </ul>
+  </li>
+  <li>Para aqueles que possuem o <em>pip</em> instalado em seus computadores, podem instalar as depêndencias executando o seguinte comando na raiz do jogo:</li>
+</ul>
+
+<blockquote>
+  <pre><code># pip install -r requeriments
+</code></pre>
+</blockquote>
+
+<h2 id="executando-spacewars-em-seu-computador">Executando <strong>SpaceWars</strong> em seu computador</h2>
+
+<p>Com as dependências instaladas, basta executar o arquivo <strong>SpaceWars</strong> localizado na raiz do diretório onde o jogo foi descompactado. Para àqueles que desejam que o jogo possa ser executado a partir de um laucher ou de qualquer diretório a partir de um terminal, basta gerar um link simbolico do executavel para a pasta <em>/usb/bin</em> ou para a <em>~/bin</em>. Tendo o endereço completo do executavel como <em>*~/Downloads/SpaceWars/SpaceWars</em> por exemplo, o seguinte comando irá criar o desejavel link simbolico:</p>
+
+<blockquote>
+  <pre><code># ln -s ~/Downloads/SpaceWars/SpaceWars /usr/bin/SpaceWars
+</code></pre>
+</blockquote>
+
+<h2 id="desinstalando-spacewars-em-seu-computador">Desinstalando <strong>SpaceWars</strong> em seu computador</h2>
+
+<p><strong>SpaceWars</strong> não gera nenhum arquivo fora do seu diretório. Basta remover a pasta pa se ver livre do jogo. Caso tenha criado um link simbolico em <em>/usb/bin</em>, será necessario remove-lo manualmente também.</p>
+
+<p><br /><br /><br /></p>
+
+<blockquote>
+  <h1 id="game-controls">Game Controls</h1>
+</blockquote>
+
+<h3 id="teclado">Teclado</h3>
+
+<ul>
+  <li>← ↑ → ↓
+    <ul>
+      <li>Controle da nave e navegação em menus.</li>
+    </ul>
+  </li>
+  <li>Barra de Espaço
+    <ul>
+      <li>Atira</li>
+    </ul>
+  </li>
+  <li>Enter
+    <ul>
+      <li>Confirmação de ação nos menus.</li>
+    </ul>
+  </li>
+  <li>Esc
+    <ul>
+      <li>Retorno de telas na navegação de menus ou abertura de menu durante o jogo.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="joystick">Joystick</h3>
+
+<ul>
+  <li>Direcionais
+    <ul>
+      <li>Controle da nave e navegação em menus.</li>
+    </ul>
+  </li>
+  <li>Botões
+    <ul>
+      <li>Atira</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h1 id="game-interface">Game Interface</h1>
+</blockquote>
+
+<center>
+    <img src="/img/game_cene.png" alt="Conceito - Fase" width="60%" />
+</center>
+
+<ol>
+  <li>Você</li>
+  <li>Alguns <em>Rohinianos</em></li>
+  <li>Aerólitos (Cuidado!)</li>
+  <li>Seu tiro</li>
+</ol>
+
+          </div>
+        </div>
+
+        <footer>
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.js"></script>
+  <script src="/js/foundation/foundation.topbar.js"></script>
+  <script src="/js/foundation/foundation.equalizer.js"></script>
+  <script src="/js/app.js"></script>
+</footer>
+
+    </body>
+</html>
