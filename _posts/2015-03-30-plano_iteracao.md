@@ -53,7 +53,32 @@ Visando obter a melhor forma de comunicação e gerenciamento, algumas ferrament
 
 >**17/04:** Resolver pendencias da segunda entrega
 
+>**10/05:** Limite para identificação/inserção de GRASPs
+
+>**11/05:** Terceira Entrega
+
+>**29/05:** Limite para identificação/inserção de GOFs
+
+>**19/06:** Entrega Final
+
 <br><br>
+
+## Puch Cards
+
+
+>#### Source
+
+<center>
+    <img src="/img/push_card_src.png" alt="Push Card" width="160%" />
+</center>
+
+>#### IO
+
+<center>
+    <img src="/img/push_card_io.png" alt="Push Card" width="160%" />
+</center>
+
+<br>
 
 ### Custos
 
@@ -83,19 +108,3 @@ SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to<br>
 redistribute it under certain conditions as specified by the GNU GPL license;<br>
 see the documentation for details.<br><br>
 **Generated using David A. Wheeler's 'SLOCCount'.** <br>
-
-
-## Puch Cards
-
-
->#### Source
-
-<center>
-    <img src="/img/push_card_src.png" alt="Push Card" width="160%" />
-</center>
-
->#### IO
-
-<center>
-    <img src="/img/push_card_io.png" alt="Push Card" width="160%" />
-</center>
